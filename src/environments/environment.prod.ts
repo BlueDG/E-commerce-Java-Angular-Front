@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendUrl: "https://fil-rouge-back.herokuapp.com/"
 };
