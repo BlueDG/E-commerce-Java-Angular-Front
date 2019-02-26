@@ -21,15 +21,16 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    let url = 'http://localhost:4200/login';
+    let url = 'http://localhost:8080/login';
     this.http.post<Observable<boolean>>(url, {
-      userName: this.model.username,
-      password: this.model.password
+      username: this.model.username,
+      password: this.model.password,
+      credential: "REGISTER"
     }).subscribe(isValid => {
       if (isValid) {
         sessionStorage.setItem(
           'token',
-          btoa(this.model.username + ':' + this.model.password)
+          btoa(this.model.username + ':' + this.model.password + ':' + this.model.credential)
         );
         this.router.navigate(['']);
       } else {
