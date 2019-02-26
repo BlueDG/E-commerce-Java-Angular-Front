@@ -5,10 +5,11 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
+  { path: 'menu', component: MenuComponent},
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: '' },
-  { path: 'menu', component: MenuComponent}
+  { path: '**', redirectTo: '' }
+  
 ];
 
 @NgModule({
