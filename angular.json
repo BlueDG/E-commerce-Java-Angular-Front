@@ -83,7 +83,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css"],
             "assets": [
               "src/favicon.ico",
               "src/assets"
