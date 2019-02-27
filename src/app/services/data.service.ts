@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User, UserLight, PostGame } from 'src/models';
 
 
+
 const URL_BACKEND = environment.backendUrl;
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,11 +20,18 @@ export class DataService {
   constructor(private _http: HttpClient) { }
 
   login(user: UserLight) {
-    return this._http.post<UserLight>(`${URL_BACKEND}/user`, user, httpOptions);
+    btoa(user.username + ':' + user.password);
+    httpOptions.headers = httpOptions.headers.set('Authorization', 'Basic ' + btoa(user.username + ':' + user.password));
+
+    return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
   }
+
 
   creerPostGame(postGame : PostGame){
     return this._http.post<PostGame>(`${environment.backendUrl}/game`, postGame);
   }
+
+
+
 
 }

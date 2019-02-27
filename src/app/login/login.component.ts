@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
-import { User, Credential, UserLight } from 'src/models';
+import { UserLight } from 'src/models';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,17 +19,19 @@ export class LoginComponent implements OnInit {
   }
 
   connect() {
-    this._serv.login(this.user).subscribe(isValid => {
-      if (isValid) {
-        sessionStorage.setItem(
-          'token',
-          btoa(this.user.username + ':' + this.user.password + ":" + this.user.credential)
-        );
+    this._serv.login(this.user).subscribe(
+      succes => {
+        this.user.credential = succes.credential;
+        sessionStorage.setItem('username', this.user.username);
+        sessionStorage.setItem('credential', this.user.credential);
+        console.log(this.user);
         this.router.navigate(['']);
-      } else {
+      }, error => {
         alert("Authentication failed.")
+        console.log(`Erreur login : ${error}`)
       }
-    });
+    )
   }
 
 }
+
