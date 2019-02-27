@@ -17,8 +17,8 @@ export enum Plateforme {
 }
 
 export interface PostGame {
-    nom? : string;
-    prix? : number;
-    plateforme? : Plateforme;
-    reference? : string;
+    nom?: string;
+    prix?: number;
+    plateforme?: Plateforme;
+    reference?: string;
 }
