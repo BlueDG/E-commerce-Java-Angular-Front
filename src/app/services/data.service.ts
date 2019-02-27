@@ -28,7 +28,7 @@ export class DataService {
 
 
   creerPostGame(postGame: PostGame) {
-    return this._http.post<PostGame>(`${environment.backendUrl}/game`, postGame);
+    return this._http.get<PostGame>(`${environment.backendUrl}/game`);
   }
 
 
