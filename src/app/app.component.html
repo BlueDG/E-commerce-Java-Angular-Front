@@ -3,14 +3,17 @@
 </head>
 
 <header>
-    <div class="header-top"> <!-- Première ligne du header -->
-        
-        <nav class="navbar navbar-expand-sm bg-light"> <!-- lien vers page accueil -->
-            <a class="navbar-brand" routerLink="#">RetroGaming</a> 
+    <div class="header-top">
+        <!-- Première ligne du header -->
+
+        <nav class="navbar navbar-expand-sm bg-light">
+            <!-- lien vers page accueil -->
+            <a class="navbar-brand" routerLink="#">RetroGaming</a>
         </nav>
 
-        <nav class="header-top-center navbar navbar-expand-sm bg-light"> <!-- Chaque lien nav mène à une page console spécifique -->
-            <ul class="navbar-nav"> 
+        <nav class="header-top-center navbar navbar-expand-sm bg-light">
+            <!-- Chaque lien nav mène à une page console spécifique -->
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="#">Mega Drive</a>
                 </li>
@@ -29,16 +32,17 @@
             </ul>
         </nav>
 
-        <nav class="navbar navbar-expand-sm bg-light"> <!-- icônes rechercher, créer et se connecter au profil, panier -->
+        <nav class="navbar navbar-expand-sm bg-light">
+            <!-- icônes rechercher, créer et se connecter au profil, panier -->
             <div>
-                <a><img src="https://image.flaticon.com/icons/png/512/34/34202.png" width = "20px"></a>
-            </div>  
-            <div>
-                <a href ="">Profil</a>
+                <a><img src="https://image.flaticon.com/icons/png/512/34/34202.png" width="20px"></a>
             </div>
             <div>
-                <a href ="">Panier</a>
-            </div>  
+                <a href="">Profil</a>
+            </div>
+            <div>
+                <a href="">Panier</a>
+            </div>
         </nav>
     </div>
 
@@ -48,12 +52,16 @@
 <router-outlet></router-outlet>
 
 <footer>
-    <div class="footer"> <!-- Footer en 4 parties de gauche à droite -->
+    <div class="footer">
+        <!-- Footer en 4 parties de gauche à droite -->
 
-        <section class="section-footer"> <!-- Logo et About us -->
+        <section class="section-footer">
+            <!-- Logo et About us -->
             <h2 class="footer-logo">RetroGaming</h2>
             <ul>
-                <a routerLink="#"><li>À propos de nous</li></a>
+                <a routerLink="#">
+                    <li>À propos de nous</li>
+                </a>
             </ul>
         </section>
 
@@ -81,4 +89,3 @@
         </section>
     </div>
 </footer>
-
