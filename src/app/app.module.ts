@@ -9,13 +9,16 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
+import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    AdminRechercheComponent,
+    
   ],
   imports: [
     NgbModule,
