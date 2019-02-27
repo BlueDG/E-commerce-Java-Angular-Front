@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import { UserLight } from 'src/models';
 @Component({
@@ -11,7 +10,7 @@ export class LoginComponent implements OnInit {
   user: UserLight = { username: '', password: '', credential: null };
 
   constructor(
-    private router: Router, private _serv: DataService
+    private _serv: DataService
   ) { }
 
   ngOnInit() {
@@ -25,7 +24,6 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('username', this.user.username);
         sessionStorage.setItem('credential', this.user.credential);
         console.log(this.user);
-        this.router.navigate(['']);
       }, error => {
         alert("Authentication failed.")
         console.log(`Erreur login : ${error}`)

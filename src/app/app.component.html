@@ -1,1 +1,84 @@
+<head>
+    <title>RetroGaming</title>
+</head>
+
+<header>
+    <div class="header-top"> <!-- Première ligne du header -->
+        
+        <nav class="navbar navbar-expand-sm bg-light"> <!-- lien vers page accueil -->
+            <a class="navbar-brand" routerLink="#">RetroGaming</a> 
+        </nav>
+
+        <nav class="header-top-center navbar navbar-expand-sm bg-light"> <!-- Chaque lien nav mène à une page console spécifique -->
+            <ul class="navbar-nav"> 
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">Mega Drive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">PSX</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">SNES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">NES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">Game Boy</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="navbar navbar-expand-sm bg-light"> <!-- icônes rechercher, créer et se connecter au profil, panier -->
+            <div>
+                <a><img src="https://image.flaticon.com/icons/png/512/34/34202.png" width = "20px"></a>
+            </div>  
+            <div>
+                <a href ="">Profil</a>
+            </div>
+            <div>
+                <a href ="">Panier</a>
+            </div>  
+        </nav>
+    </div>
+
+    <app-menu></app-menu>
+</header>
+
 <router-outlet></router-outlet>
+
+<footer>
+    <div class="footer"> <!-- Footer en 4 parties de gauche à droite -->
+
+        <section class="section-footer"> <!-- Logo et About us -->
+            <h2 class="footer-logo">RetroGaming</h2>
+            <ul>
+                <a routerLink="#"><li>À propos de nous</li></a>
+            </ul>
+        </section>
+
+        <section class="section-footer">
+            <h2 class="footer-title">Contact</h2>
+            <ul>
+                <li>FAQ</li>
+                <li>Contact Email</li>
+                <li>Effectuer un retour</li>
+            </ul>
+        </section>
+
+        <section class="section-footer">
+            <h2 class="footer-title">Mon compte</h2>
+            <ul>
+                <li>Connexion</li>
+                <li>Créer un compte</li>
+            </ul>
+        </section>
+
+        <section class="section-footer">
+            <h2 class="footer-title">Réseaux Sociaux</h2>
+            <a routerLink="#"><i class="fab fa-facebook"></i></a>
+            <a routerLink="#"><i class="fab fa-instagram"></i></a>
+        </section>
+    </div>
+</footer>
+
