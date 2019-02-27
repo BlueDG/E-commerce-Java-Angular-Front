@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from 'src/app/services/data.service';
-import { PostGame, Plateforme } from 'src/models';
+import { PostGame } from 'src/models';
 
 @Component({
   selector: 'app-admin-recherche',
