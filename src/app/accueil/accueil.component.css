@@ -1,0 +1,14 @@
+
+
+.img-carousel-container{
+    width: 900px;
+    height: 900px;
+}
+
+
+.img-carousel {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    
+}

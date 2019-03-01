@@ -1,19 +1,19 @@
-<div class="w-100 d-flex p-2">
-  <ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-      <img [src]="src/assets/img/slider-genesis.jpg" alt="Random first slide">
+<div class="w-100">
+  <ngb-carousel *ngIf="images" class="w-100">
+    <ng-template ngbSlide class="img-carousel-container">
+      <img class=".img-fluid img-carousel" src="../../assets/img/slider-snes.jpg" alt="first slide">
       <div class="carousel-caption">
         <h3>SNES</h3>
       </div>
     </ng-template>
-    <ng-template ngbSlide>
-      <img src="src/assets/img/slider-genesis.jpg" alt="second slide">
+    <ng-template ngbSlide class="img-carousel-container">
+      <img class=".img-fluid img-carousel" src="../../assets/img/slider-genesis.jpg" alt="second slide">
       <div class="carousel-caption">
         <h3>MEGA DRIVE</h3>
       </div>
     </ng-template>
-    <ng-template ngbSlide>
-      <img [src]="images[2]"  alt="Random third slide">
+    <ng-template ngbSlide class="img-carousel-container">
+      <img class=".img-fluid img-carousel" src="../../assets/img/slider-all-games.jpg"  alt="third slide">
       <div class="carousel-caption">
         <h3>Tous nos jeux</h3>
       </div>
