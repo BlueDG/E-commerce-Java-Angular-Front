@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
     ).subscribe(() => {
       this.successMessage = null;
       this.modalService.dismissAll();
+      window.location.reload();
     });
     this._fail.subscribe((message) => this.failMessage = message);
     this._fail.pipe(
