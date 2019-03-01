@@ -1,3 +1,22 @@
-<p>
-  accueil works!
-</p>
+<div class="w-100 d-flex p-2">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <img [src]="src/assets/img/slider-genesis.jpg" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>SNES</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="src/assets/img/slider-genesis.jpg" alt="second slide">
+      <div class="carousel-caption">
+        <h3>MEGA DRIVE</h3>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]"  alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>Tous nos jeux</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
