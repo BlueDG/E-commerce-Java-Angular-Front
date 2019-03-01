@@ -6,43 +6,10 @@
     <app-menu></app-menu>
 </header>
 
-<router-outlet class="page-css"></router-outlet>
+<div class="main-background">
+    <router-outlet class="page-css-commun"></router-outlet>
+</div>
 
 <footer>
-
-    <div class="footer row"> <!-- Footer en 4 parties de gauche à droite -->
-
-        <section class="section-footer col-md-"> <!-- Logo et About us -->
-
-            <h2 class="footer-logo">RetroGaming</h2>
-            <ul>
-                <a routerLink="#">
-                    <li>À propos de nous</li>
-                </a>
-            </ul>
-        </section>
-
-        <section class="section-footer col-md-">
-            <h2 class="footer-title">Contact</h2>
-            <ul>
-                <li>FAQ</li>
-                <li>Contact Email</li>
-                <li>Effectuer un retour</li>
-            </ul>
-        </section>
-
-        <section class="section-footer col-md-">
-            <h2 class="footer-title">Mon compte</h2>
-            <ul>
-                <li>Connexion</li>
-                <li>Créer un compte</li>
-            </ul>
-        </section>
-
-        <section class="section-footer col-md-">
-            <h2 class="footer-title">Réseaux Sociaux</h2>
-            <a routerLink="#"><i class="fab fa-facebook"></i></a>
-            <a routerLink="#"><i class="fab fa-instagram"></i></a>
-        </section>
-    </div>
+    <app-footer></app-footer>
 </footer>

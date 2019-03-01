@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
+import { FooterComponent } from './footer/footer.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { ProduitPageComponent } from './produit-page/produit-page.component';
+import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { AdminRechercheComponent } from './admin-recherche/admin-recherche.compo
     HomeComponent,
     MenuComponent,
     AdminRechercheComponent,
+    FooterComponent,
+    AccueilComponent,
+    ProduitPageComponent,
+    ProduitListeComponent,
     
   ],
   imports: [

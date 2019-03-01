@@ -1,22 +1,14 @@
 
-/* *****	Header CSS		***** */
+/* *****	page-css-commun CSS		***** */
 
 
-
-
-
-/* *****	Footer CSS		***** */
-.footer {
-    justify-content: space-around;
-	margin-top: 60px;
-	border-top: 1px solid lightgrey;
-	padding-top: 2%;
+.main-background {
+    
 }
 
-.section-footer li{
-    margin: 10% 0 10% 0;
+.page-css-commun {
+
 }
 
-.section-footer a:hover {
-    font-weight: bold;
-}
+
+

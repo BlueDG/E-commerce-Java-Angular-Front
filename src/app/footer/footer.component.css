@@ -1,0 +1,19 @@
+/* *****	Footer CSS		***** */
+.footer {
+    background-image: url(src/assets/img/wallpaper-footer.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+  background-size: auto;
+    justify-content: space-around;
+	margin-top: 60px;
+	border-top: 1px solid lightgrey;
+	padding-top: 2%;
+}
+
+.section-footer li{
+    margin: 10% 0 10% 0;
+}
+
+.section-footer a:hover {
+    font-weight: bold;
+}
