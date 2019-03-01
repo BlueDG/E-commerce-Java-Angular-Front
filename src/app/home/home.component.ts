@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   logout() {
-    sessionStorage.setItem('token', '');
+    sessionStorage.setItem('username', '');
+    sessionStorage.setItem('credential', 'VISITOR');
   }
 
 
