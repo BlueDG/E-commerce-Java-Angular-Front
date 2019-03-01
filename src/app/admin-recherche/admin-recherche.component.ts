@@ -18,7 +18,7 @@ export class AdminRechercheComponent implements OnInit {
   }
 
   submit() {
-    this._data.creerPostGame(this.postGame).subscribe(
+    this._data.creerPostGame("1", this.postGame).subscribe(
       value => { this.message = 'Enregistrement réussi.'},
       error => { this.message = "Erreur lors de l'enregistrement."}
     );

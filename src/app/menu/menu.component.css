@@ -4,13 +4,13 @@
 }
 
 @font-face {
-	font-family: 'Super Mario World Text Box';
-	src: url('src/assets/fonts/SuperMarioWorldTextBox.ttf') format("opentype");
+	font-family: 'Mario-Kart-DS';
+	src: url('src/assets/fonts/Mario-Kart-DS.ttf') format("opentype");
   }
 
 
 .big-title {
-	font-family: 'Super Mario World Text Box';
+	font-family: 'Mario-Kart-DS';
 }
 
 
