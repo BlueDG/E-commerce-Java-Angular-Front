@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
     ).subscribe(() => {
       this.successMessage = null;
       this.modalService.dismissAll();
+      this.router.navigateByUrl("/menu")
     });
     this._fail.subscribe((message) => this.failMessage = message);
     this._fail.pipe(
