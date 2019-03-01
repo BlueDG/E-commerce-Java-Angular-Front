@@ -26,12 +26,9 @@ export class DataService {
     return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
   }
 
-
-  creerPostGame(postGame: PostGame) {
+  creerPostGame(page: string, postGame: PostGame) {
+    httpOptions.headers = httpOptions.headers.set('Page', page);
     return this._http.post<PostGame>(`${environment.backendUrl}/game`, postGame, httpOptions);
   }
-
-
-
 
 }
