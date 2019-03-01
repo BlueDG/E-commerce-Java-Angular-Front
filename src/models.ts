@@ -22,3 +22,8 @@ export interface PostGame {
     plateform? : Plateform;
     reference? : string;
 }
+
+export interface GamePaging {
+    pages : number;
+    games : PostGame[];
+}
