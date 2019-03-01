@@ -1,21 +1,10 @@
-.header-down {
-    padding: 0% 2%;
-    border-bottom: 1px solid lightgrey;
-}
-
-@font-face {
-	font-family: 'Mario-Kart-DS';
-	src: url('src/assets/fonts/Mario-Kart-DS.ttf') format("opentype");
-  }
-
-
-.big-title {
-	font-family: 'Mario-Kart-DS';
-}
 
 
 /* CSS POUR HEADER TOP */
 .header-top {
+	background-image: url(src/assets/img/wallpaper-header.png);
+    background-repeat: no-repeat;
+  	background-size: auto;
     display: flex;
 	justify-content: space-around;
     border-bottom: 1px solid lightgrey;
@@ -88,3 +77,18 @@ a {
 
 
 /* ******************************************** */
+
+.header-down {
+    padding: 0% 2%;
+    border-bottom: 1px solid lightgrey;
+}
+
+@font-face {
+	font-family: 'Mario-Kart-DS';
+	src: url('src/assets/fonts/Mario-Kart-DS.ttf') format("opentype");
+  }
+
+
+.big-title {
+	font-family: 'Mario-Kart-DS';
+}

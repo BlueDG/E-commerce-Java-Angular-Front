@@ -9,7 +9,9 @@ import { AdminRechercheComponent } from '../admin-recherche/admin-recherche.comp
   styleUrls: ['./admin-affiche.component.css']
 })
 export class AdminAfficheComponent implements OnInit {
-  
+
+  @Input() games: PostGame[];
+
   constructor() { }
 
   ngOnInit() {
