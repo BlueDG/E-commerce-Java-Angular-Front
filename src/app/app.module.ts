@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ProduitPageComponent } from './produit-page/produit-page.component';
 import { ProduitListeComponent } from './produit-liste/produit-liste.component';
+import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { ProduitListeComponent } from './produit-liste/produit-liste.component';
     AccueilComponent,
     ProduitPageComponent,
     ProduitListeComponent,
+    AdminAfficheComponent,
+
     
   ],
   imports: [

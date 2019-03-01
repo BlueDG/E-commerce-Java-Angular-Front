@@ -11,6 +11,8 @@ export class AdminRechercheComponent implements OnInit {
 
   postGame : PostGame = {};
   message : string = "";
+  games : PostGame[] = [];
+  pages : number;
 
   constructor(private _data: DataService) { }
 
@@ -18,10 +20,18 @@ export class AdminRechercheComponent implements OnInit {
   }
 
   submit() {
-    this._data.creerPostGame("1", this.postGame).subscribe(
-      value => { this.message = 'Enregistrement réussi.'},
+    this._data.creerPostGame("1",this.postGame).subscribe(
+      value => { this.message = 'Enregistrement réussi.';
+      this.games = value.games;
+      this.pages = value.pages;
+  },
       error => { this.message = "Erreur lors de l'enregistrement."}
     );
+  }
+
+  newSearch() {
+    this.games = [];
+    window.location.reload();
   }
 }
 
