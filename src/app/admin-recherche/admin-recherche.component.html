@@ -1,4 +1,4 @@
-
+<div *ngIf="games?.length == 0">
   <form (ngSubmit)="submit()" #monForm="ngForm">
     <table>
       <tr>
@@ -21,4 +21,8 @@
     <button type="submit">Envoyer</button>
     {{message}}
   </form>
-</div> 
+</div>
+
+<div *ngIf="games?.length != 0">
+  <app-admin-affiche></app-admin-affiche>
+</div>

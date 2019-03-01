@@ -32,8 +32,6 @@ export class DataService {
     return this._http.post<GamePaging>(`${environment.backendUrl}/game`, postGame, httpOptions);
   }
 
-  changeBool(bool : boolean) : Observable<boolean>{
-    return of(bool);
-  }
+ 
 
 }

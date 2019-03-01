@@ -11,7 +11,7 @@ export class AdminRechercheComponent implements OnInit {
 
   postGame : PostGame = {};
   message : string = "";
-  games : PostGame[];
+  games : PostGame[] = [];
   pages : number;
 
   constructor(private _data: DataService) { }
@@ -27,6 +27,11 @@ export class AdminRechercheComponent implements OnInit {
   },
       error => { this.message = "Erreur lors de l'enregistrement."}
     );
+  }
+
+  newSearch() {
+    this.games = [];
+    window.location.reload();
   }
 }
 

@@ -1,4 +1,4 @@
-<div *ngFor='let obj of games' class="col-4 text-center">
+<div *ngFor='let obj of games'>
   <table>
     <tr>
       <td>{{obj.name}}</td>
@@ -11,6 +11,7 @@
     </tr>
     <tr>
       <td>{{obj.reference}}</td>
-    </tr> 
+    </tr>
   </table>
 </div>
+<button (click)="newSearch()">Nouvelle recherche</button>
