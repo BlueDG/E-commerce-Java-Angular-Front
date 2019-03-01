@@ -4,10 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
 import { AppComponent } from './app.component';
+import { AdminCreerComponent } from './admin-creer/admin-creer.component';
 
 const routes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'search', component: AdminRechercheComponent },
+  { path: 'create', component: AdminCreerComponent},
   { path: '**', redirectTo: '' }
 
 ];

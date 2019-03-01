@@ -32,6 +32,5 @@ export class DataService {
     return this._http.post<GamePaging>(`${environment.backendUrl}/game`, postGame, httpOptions);
   }
 
- 
 
 }

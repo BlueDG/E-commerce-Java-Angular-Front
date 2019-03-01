@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
 import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
+import { AdminCreerComponent } from './admin-creer/admin-creer.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
     MenuComponent,
     AdminRechercheComponent,
     AdminAfficheComponent,
+    AdminCreerComponent,
     
   ],
   imports: [
