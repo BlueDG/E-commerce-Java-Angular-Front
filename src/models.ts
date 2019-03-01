@@ -17,13 +17,13 @@ export enum Plateform {
 }
 
 export interface PostGame {
-    name? : string;
-    price? : number;
-    plateform? : Plateform;
-    reference? : string;
+    name?: string;
+    price?: number;
+    plateform?: string;
+    reference?: string;
 }
 
 export interface GamePaging {
-    pages : number;
-    games : PostGame[];
+    pages: number;
+    games: PostGame[];
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from 'src/app/services/data.service';
+import { DataService } from 'src/app/services/data.service';
 import { PostGame } from 'src/models';
 
 @Component({
@@ -9,10 +9,10 @@ import { PostGame } from 'src/models';
 })
 export class AdminRechercheComponent implements OnInit {
 
-  postGame : PostGame = {};
-  message : string = "";
-  games : PostGame[] = [];
-  pages : number;
+  postGame: PostGame = {};
+  message: string = "";
+  games: PostGame[] = [];
+  pages: number;
 
   constructor(private _data: DataService) { }
 
@@ -20,12 +20,14 @@ export class AdminRechercheComponent implements OnInit {
   }
 
   submit() {
-    this._data.creerPostGame("1",this.postGame).subscribe(
-      value => { this.message = 'Enregistrement réussi.';
-      this.games = value.games;
-      this.pages = value.pages;
-  },
-      error => { this.message = "Erreur lors de l'enregistrement."}
+    this._data.creerPostGame("1", this.postGame).subscribe(
+      value => {
+      this.message = 'Enregistrement réussi.';
+        this.games = value.games;
+        this.pages = value.pages;
+        console.log(value.games);
+      },
+      error => { this.message = "Erreur lors de l'enregistrement." }
     );
   }
 
@@ -36,5 +38,5 @@ export class AdminRechercheComponent implements OnInit {
 }
 
 
-  
+
 
