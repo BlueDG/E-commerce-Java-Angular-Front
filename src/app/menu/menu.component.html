@@ -1,31 +1,35 @@
 
 
-  <div class="header-down">
+  <div class="header-down d-flex justify-content-between row">
+    <div>
+      <nav class="navbar navbar-expand-sm"> <!-- Ajouter ici NGIF // Ligne 2 de la page web // Administrateur -->
+        <a class="nav-link" routerLink="#">Tous nos jeux</a>
+        <a *ngIf="credential == 'REGISTER'" class="nav-link" routerLink="#">Mes commandes</a>
+        <a *ngIf="credential == 'ADMIN'" class="nav-link" routerLink="#">Gestion des commandes</a> 
+        <a *ngIf="credential == 'ADMIN'" class="nav-link" routerLink="#">Gestion des produits</a>
+      </nav>
+    </div>
 
-      <div class="header-down-left"> <!-- Ajouter ici NGIF // Ligne 2 de la page web // Visiteur -->
-        <a routerLink="#">Tous nos jeux</a>
-      </div>
-  
-      <div class="header-down-left"> <!-- Ajouter ici NGIF // Ligne 2 de la page web // Utilisateur -->
-        <a routerLink="#">Tous nos jeux</a>
-        <a routerLink="#">Mes commandes</a>
-      </div>
-  
-      <div class="header-down-left"> <!-- Ajouter ici NGIF // Ligne 2 de la page web // Administrateur -->
-        <a routerLink="#">Tous nos jeux</a>
-        <a routerLink="#">Gestion des commandes</a> 
-        <a routerLink="#">Gestion des produits</a>
-      </div>
-  
-      <div class="header-down-right">
-          <nav class="nav2"> 
-              <a routerLink="#">Arcade</a>
-              <a routerLink="#">RPG</a>
-              <a routerLink="#">FPS</a>
-              <a routerLink="#">SPORT</a>
-              <a routerLink="#">ADVENTURE</a>
-          </nav> 
-      </div>
+      <nav class="navbar navbar-expand-sm">
+          <ul class="navbar-nav"> 
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="#">ARCADE</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="#">RPG</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="#">FPS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="#">SPORT</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="#">ADVENTURE</a>
+              </li>
+          </ul>
+
+      </nav>
   
     </div>
   

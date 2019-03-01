@@ -8,7 +8,6 @@ import { AdminRechercheComponent } from './admin-recherche/admin-recherche.compo
 
 const routes: Routes = [
   { path: 'menu', component: MenuComponent },
-  { path: '', component: AppComponent },
   { path: 'login', component: LoginComponent },
   { path: 'search', component: AdminRechercheComponent },
   { path: '**', redirectTo: '' }
