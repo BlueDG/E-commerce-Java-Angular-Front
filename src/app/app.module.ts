@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
+import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AdminRechercheComponent } from './admin-recherche/admin-recherche.compo
     HomeComponent,
     MenuComponent,
     AdminRechercheComponent,
+    AdminAfficheComponent,
     
   ],
   imports: [

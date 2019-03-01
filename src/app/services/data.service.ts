@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User, UserLight, PostGame } from 'src/models';
+import { User, UserLight, PostGame, GamePaging } from 'src/models';
+import { Observable, of } from 'rxjs';
 
 
 
@@ -26,9 +27,13 @@ export class DataService {
     return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
   }
 
-  creerPostGame(page: string, postGame: PostGame) {
+  creerPostGame(page: string, postGame: PostGame) : Observable<GamePaging>{
     httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.post<PostGame>(`${environment.backendUrl}/game`, postGame, httpOptions);
+    return this._http.post<GamePaging>(`${environment.backendUrl}/game`, postGame, httpOptions);
+  }
+
+  changeBool(bool : boolean) : Observable<boolean>{
+    return of(bool);
   }
 
 }
