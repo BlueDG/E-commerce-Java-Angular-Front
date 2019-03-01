@@ -29,12 +29,9 @@ import { AdminCreerComponent } from './admin-creer/admin-creer.component';
     ProduitPageComponent,
     ProduitListeComponent,
     AdminAfficheComponent,
-<<<<<<< HEAD
     AdminCreerComponent,
-=======
 
->>>>>>> 4640756650256f90c44945dce58f866da5ec3b9a
-    
+
   ],
   imports: [
     NgbModule,

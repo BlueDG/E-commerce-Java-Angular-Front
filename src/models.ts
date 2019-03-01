@@ -28,20 +28,20 @@ export interface PostGame {
 }
 
 export interface GamePaging {
-    pages : number;
-    games : PostGame[];
+    pages: number;
+    games: PostGame[];
 }
 
 export interface Game {
-    name? : string;
-    plateform? : Plateform;
-    genre? : Genre;
-    price? : number;
-    image? : string;
-    description? : string;
-    reference? : string;
-    stock? : number;
-    editor? : string;
-    date? : Date;
-    active? : boolean;
+    name?: string;
+    plateform?: Plateform;
+    genre?: Genre;
+    price?: number;
+    image?: string;
+    description?: string;
+    reference?: string;
+    stock?: number;
+    editor?: string;
+    date?: Date;
+    active?: boolean;
 }
