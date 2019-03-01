@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
+import { FooterComponent } from './footer/footer.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { ProduitPageComponent } from './produit-page/produit-page.component';
+import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
 
 @NgModule({
@@ -19,7 +23,12 @@ import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
     HomeComponent,
     MenuComponent,
     AdminRechercheComponent,
+    FooterComponent,
+    AccueilComponent,
+    ProduitPageComponent,
+    ProduitListeComponent,
     AdminAfficheComponent,
+
     
   ],
   imports: [
