@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Credential } from 'src/models';
 
 @Component({
   selector: 'app-menu',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
- 
+  credential : string = Credential.VISITOR;
 
   constructor() { }
 
   ngOnInit() {
+    this.credential = sessionStorage.getItem("credential")
   }
 
 }
