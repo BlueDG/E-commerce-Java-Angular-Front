@@ -27,7 +27,19 @@ export class AdminAfficheComponent implements OnInit {
   }
 
   delete(game: Game) {
-    this._data.deleteGameAdmin(game)
+    this._data.deleteGameAdmin(game).subscribe(
+      value => {
+        this.totalResult-- , this.printNewPage()
+      },
+      error => { console.log('Erreur lors de la suppression') }
+    );
+  }
+
+  activateDeactivate(game: Game) {
+    this._data.activateDeactivate(game).subscribe(
+      value => { this.printNewPage() },
+      error => { console.log('Erreur lors de l\'activation/désactivation') }
+    )
   }
 
   printNewPage() {
@@ -39,4 +51,5 @@ export class AdminAfficheComponent implements OnInit {
       error => { }
     );
   }
+
 }

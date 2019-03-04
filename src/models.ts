@@ -33,6 +33,7 @@ export interface GamePaging {
 }
 
 export interface Game {
+    id?: number;
     name?: string;
     plateform?: Plateform;
     genre?: Genre;
