@@ -1,4 +1,25 @@
+@font-face {
+    font-family: snes;
+    src: url(../../assets/fonts/SNES.ttf) format("opentype");
+  }
 
+@font-face {
+    font-family: genesis;
+    src: url(../../assets/fonts/genesis.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: gameAll;
+    src: url(../../assets/fonts/game.ttf) format("opentype");
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 2px 2px 1px black;
+}
+
+/* css carousel */
 
 .img-carousel-container{
     width: 900px;
@@ -12,3 +33,92 @@
     object-fit: cover;
     
 }
+
+
+.ccaption-1 {
+    font-family: snes !important;
+}
+
+.ccaption-2 {
+    font-family: genesis !important;
+}
+
+.ccaption-3 {
+    font-family: gameAll !important;
+} 
+
+
+/* css des deux rangées avec trois produits */
+
+
+.ensemble-rangee-1 {
+    background-image: url("../../assets/img/background-img-body.png");
+    height: 25rem;
+    padding-top: 50px;
+    display: flex;
+}
+
+.products-intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: blueviolet;
+}
+
+.title-top-games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    width: 50%;
+}
+
+/* css des images sur la rangée */
+
+
+.select-item {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 2% 0 2%;
+}
+
+.img-container-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 40%;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+    background-color: grey;
+}
+
+.img-container-main:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.select-item a{
+    padding-top: 5%;
+}
+
+
+.ensemble-rangee-1 img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/*  */

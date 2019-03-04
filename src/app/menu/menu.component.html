@@ -1,78 +1,80 @@
+<div class="background-header">
+    
+    <div class="header-top"> <!-- Première ligne du header -->
+            
+        <nav class="navbar navbar-expand-sm"> <!-- lien vers page accueil -->
+            <a class="navbar-brand big-title" routerLink="#">RETROGAMING</a> 
 
-  <div class="header-top"> <!-- Première ligne du header -->
-          
-    <nav class="navbar navbar-expand-sm"> <!-- lien vers page accueil -->
-        <a class="navbar-brand big-title" routerLink="#">RETROGAMING</a> 
+        </nav>
 
-    </nav>
+        <nav class="header-top-center navbar navbar-expand-sm">
+            <!-- Chaque lien nav mène à une page console spécifique -->
+            <ul class="navbar-nav">
 
-    <nav class="header-top-center navbar navbar-expand-sm">
-        <!-- Chaque lien nav mène à une page console spécifique -->
-        <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="navbar-brand" routerLink="#">Mega Drive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" routerLink="#">PSX</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" routerLink="#">SNES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" routerLink="#">NES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" routerLink="#">Game Boy</a>
+                </li>
+            </ul>
+        </nav>
 
-            <li class="nav-item">
-                <a class="navbar-brand" routerLink="#">Mega Drive</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand" routerLink="#">PSX</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand" routerLink="#">SNES</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand" routerLink="#">NES</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand" routerLink="#">Game Boy</a>
-            </li>
-        </ul>
-    </nav>
+        <nav class=" nav1 navbar navbar-expand-sm">
+            <!-- icônes rechercher, créer et se connecter au profil, panier -->
+            <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            </form>
+            <div>
+                <app-login></app-login>
+            </div>
+            <div>
+                <a class="navbar-brand" routerLink="#"><img src="https://img.icons8.com/windows/50/000000/buy.png"></a>
+            </div>
 
-    <nav class=" nav1 navbar navbar-expand-sm">
-        <!-- icônes rechercher, créer et se connecter au profil, panier -->
-        <form class="form-inline" action="/action_page.php">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        </form>
-        <div>
-            <app-login></app-login>
-        </div>
-        <div>
-            <a class="navbar-brand" routerLink="#"><img src="https://img.icons8.com/windows/50/000000/buy.png"></a>
-        </div>
-
-    </nav>
-</div>
-
-<div class="header-down d-flex justify-content-between row">
-    <div>
-        <nav class="navbar navbar-expand-sm">
-            <!-- Ajouter ici NGIF // Ligne 2 de la page web // Administrateur -->
-            <a class="nav-link" routerLink="#">Tous nos jeux</a>
-            <a *ngIf="credential == 'REGISTER'" class="nav-link" routerLink="#">Mes commandes</a>
-            <a *ngIf="credential == 'ADMIN'" class="nav-link" routerLink="#">Gestion des commandes</a>
-            <a *ngIf="credential == 'ADMIN'" class="nav-link" routerLink="/search">Gestion des produits</a>
         </nav>
     </div>
 
-    <nav class="navbar navbar-expand-sm">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">ARCADE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">RPG</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">FPS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">SPORT</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">ADVENTURE</a>
-            </li>
-        </ul>
+    <div class="header-down d-flex justify-content-between row">
+        <div>
+            <nav class="navbar navbar-expand-sm">
+                <!-- Ajouter ici NGIF // Ligne 2 de la page web // Administrateur -->
+                <a class="nav-link" routerLink="#">Tous nos jeux</a>
+                <a *ngIf="credential == 'REGISTER'" class="nav-link" routerLink="#">Mes commandes</a>
+                <a *ngIf="credential == 'ADMIN'" class="nav-link" routerLink="#">Gestion des commandes</a>
+                <a *ngIf="credential == 'ADMIN'" class="nav-link" routerLink="/search">Gestion des produits</a>
+            </nav>
+        </div>
 
-    </nav>
+        <nav class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">ARCADE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">RPG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">FPS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">SPORT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#">ADVENTURE</a>
+                </li>
+            </ul>
 
+        </nav>
+
+    </div>
 </div>
