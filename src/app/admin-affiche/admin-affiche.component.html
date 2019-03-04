@@ -6,6 +6,7 @@
       <th scope="col">Platform</th>
       <th scope="col">Reference</th>
       <th scope="col">Edit</th>
+      <th scope="col">Activer/Desactiver</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
@@ -22,9 +23,11 @@
 
       <td><button class="btn btn-secondary">Edit</button></td>
 
-      <td><button class="btn btn-danger">Delete</button></td>
+      <td><button class="btn btn-secondary">Activer/Desactiver</button></td>
+
+      <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
     </tr>
 
   </tbody>
 </table>
-<button (click)="newSearch()">Nouvelle recherche</button>
+<button class="btn btn-outline-dark" (click)="newSearch()">Nouvelle recherche</button>

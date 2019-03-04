@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Game, Genre } from 'src/models'
+import { Game, Genre, Plateform } from 'src/models'
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -10,15 +10,22 @@ import { DataService } from 'src/app/services/data.service';
 export class AdminCreerComponent implements OnInit {
 
   game: Game = {};
-  genre: Genre = Genre.AVENTURE;
-
+  genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.PLATEFORME, Genre.RPG];
+  plateforme: Plateform[] = [Plateform.GAMEBOY, Plateform.MEGA_DRIVE, Plateform.NES, Plateform.PLAYSTATION, Plateform.SUPER_NINTENDO];
+  message: string = '';
   constructor(private _data: DataService) { }
 
   ngOnInit() {
   }
 
   submit() {
-
+    this._data.createGameAdmin(this.game).subscribe(
+      value => {
+        this.message = 'Enregistrement réussi.';
+        console.log(this.game);
+      },
+      error => { this.message = "Erreur lors de l'enregistrement." }
+    );
   }
 
 }

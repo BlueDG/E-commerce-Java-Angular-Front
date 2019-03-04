@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PostGame } from 'src/models';
+import { Game } from 'src/models';
 import { AdminRechercheComponent } from '../admin-recherche/admin-recherche.component';
+import { DataService } from 'src/app/services/data.service';
 
 
 @Component({
@@ -10,11 +11,18 @@ import { AdminRechercheComponent } from '../admin-recherche/admin-recherche.comp
 })
 export class AdminAfficheComponent implements OnInit {
 
-  @Input() games: PostGame[];
+  @Input() games: Game[];
 
-  constructor() { }
+  constructor(private _data: DataService) { }
 
   ngOnInit() {
   }
 
+  newSearch() {
+    window.location.reload();
+  }
+
+  delete(game: Game) {
+    this._data.deleteGameAdmin(game)
+  }
 }
