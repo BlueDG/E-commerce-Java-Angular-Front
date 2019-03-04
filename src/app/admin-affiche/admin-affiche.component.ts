@@ -35,6 +35,13 @@ export class AdminAfficheComponent implements OnInit {
     );
   }
 
+  activateDeactivate(game: Game) {
+    this._data.activateDeactivate(game).subscribe(
+      value => { this.printNewPage() },
+      error => { console.log('Erreur lors de l\'activation/désactivation') }
+    )
+  }
+
   printNewPage() {
     this._data.searchGameAdmin(this.page.toString(), this.gameSearch).subscribe(
       value => {
