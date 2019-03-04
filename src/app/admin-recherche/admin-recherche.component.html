@@ -24,9 +24,7 @@
 </div>
 
 
-<div *ngIf="games?.length != 0; else elseBlock">
+<div *ngIf="games?.length > 0">
   <app-admin-affiche [games]="games"></app-admin-affiche>
 </div>
-<ng-template #elseBlock>
-
-</ng-template>
+<!--<div *ngIf="games?.length == 0; then changeFailMessage('aucun resultat')"></div>-->
