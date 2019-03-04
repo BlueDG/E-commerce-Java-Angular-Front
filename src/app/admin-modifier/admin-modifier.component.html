@@ -1,3 +1,62 @@
-<p>
-  admin-modifier works!
-</p>
+<form (ngSubmit)="submit()" #monForm="ngForm" autocomplete="off">
+    <table>
+      <tr>
+        <td><label>Nom</label></td>
+        <td><input [(ngModel)]="game.name" name="val1" required></td>
+      </tr>
+      <tr>
+        <td><label>Plateforme</label></td>
+        <td>
+          <select [(ngModel)]="game.plateform" name="val2">
+            <option value="" disabled selected hidden>Selectionner...</option>
+            <option value={{plateforme[0]}}>Gameboy</option>
+            <option value={{plateforme[1]}}>Mega Drive</option>
+            <option value={{plateforme[2]}}>NES</option>
+            <option value={{plateforme[3]}}>Playstation</option>
+            <option value={{plateforme[4]}}>Super Nintendo</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Genre</label></td>
+        <td>
+          <select [(ngModel)]="game.genre" name="val3">
+            <option value="" disabled selected="selected" hidden>Selectionner...</option>
+            <option value={{genre[0]}}>Aventure</option>
+            <option value={{genre[1]}}>FPS</option>
+            <option value={{genre[2]}}>Plateforme</option>
+            <option value={{genre[3]}}>RPG</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Prix</label></td>
+        <td><input [(ngModel)]="game.price" name="val4" required></td>
+      </tr>
+      <tr>
+        <td><label>Image</label></td>
+        <td><input [(ngModel)]="game.image" name="val4"></td>
+      </tr>
+      <tr>
+        <td><label>Description</label></td>
+        <td><textarea [(ngModel)]='game.description' rows="10" cols="30"></textarea></td>
+      </tr>
+      <tr>
+        <td><label>Stock</label></td>
+        <td><input [(ngModel)]="game.stock" name="val6" required></td>
+      </tr>
+      <tr>
+        <td><label>Editeur</label></td>
+        <td><input [(ngModel)]="game.editor" name="val7"></td>
+      </tr>
+      <tr>
+        <td><label>Date parution</label></td>
+        <td><input [ngModel]="game.date" type="date" name="startDate" /></td>
+      </tr>
+      <tr>
+        <td><input type="reset" [disabled]="monForm.pristine"></td>
+        <td><button type="submit" [disabled]="monForm.invalid">Envoyer</button></td>
+      </tr>
+    </table>
+    {{message}}
+  </form>

@@ -27,7 +27,12 @@ export class AdminAfficheComponent implements OnInit {
   }
 
   delete(game: Game) {
-    this._data.deleteGameAdmin(game)
+    this._data.deleteGameAdmin(game).subscribe(
+      value => {
+        this.totalResult-- , this.printNewPage()
+      },
+      error => { console.log('Erreur lors de la suppression') }
+    );
   }
 
   printNewPage() {
