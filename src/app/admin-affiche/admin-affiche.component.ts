@@ -12,13 +12,13 @@ export class AdminAfficheComponent implements OnInit {
 
   @Input() games: PostGame[];
 
+
   constructor() { }
 
   ngOnInit() {
   }
 
   newSearch() {
-    this.games = [];
     window.location.reload();
   }
 }
