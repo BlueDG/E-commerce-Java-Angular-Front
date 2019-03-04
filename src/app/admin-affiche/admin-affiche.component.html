@@ -23,11 +23,16 @@
 
       <td><button class="btn btn-secondary"><a [routerLink]="">Edit</a></button></td>
 
-      <td><button class="btn btn-secondary">Activer/Desactiver</button></td>
+      <td><button id="activated" class="btn btn-secondary">Activer/Desactiver</button></td>
 
       <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
     </tr>
 
   </tbody>
 </table>
-<button class="btn btn-outline-dark" (click)="newSearch()">Nouvelle recherche</button>
+<ngb-pagination class="d-flex justify-content-center" [collectionSize]='totalResult' [(page)]="page"
+  aria-label="Default pagination" (pageChange)="printNewPage()"></ngb-pagination>
+<div class="d-flex justify-content-center">
+  <button class="btn btn-outline-dark" (click)="newSearch()">Nouvelle recherche</button>
+  <button class="btn btn-outline-dark" routerLink="/create">Ajouter un produit</button>
+</div>

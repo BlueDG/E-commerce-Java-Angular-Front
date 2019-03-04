@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Game } from 'src/models';
+import { Game, PostGame } from 'src/models';
 import { AdminRechercheComponent } from '../admin-recherche/admin-recherche.component';
 import { DataService } from 'src/app/services/data.service';
 
@@ -11,7 +11,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class AdminAfficheComponent implements OnInit {
 
+  page: number = 1;
+
   @Input() games: Game[];
+  @Input() totalResult: number;
+  @Input() gameSearch: PostGame;
 
   constructor(private _data: DataService) { }
 
@@ -24,5 +28,15 @@ export class AdminAfficheComponent implements OnInit {
 
   delete(game: Game) {
     this._data.deleteGameAdmin(game)
+  }
+
+  printNewPage() {
+    this._data.searchGameAdmin(this.page.toString(), this.gameSearch).subscribe(
+      value => {
+
+        this.games = value.games;
+      },
+      error => { }
+    );
   }
 }

@@ -1,6 +1,6 @@
 <div *ngIf="games?.length == 0">
 
-  <a class="nav-link" routerLink="/create">Ajouter un produit</a>
+  <button class="btn btn-outline-dark" routerLink="/create">Ajouter un produit</button>
   <form (ngSubmit)="submit()" #monForm="ngForm">
     <table>
       <tr>
@@ -27,6 +27,6 @@
 
 
 <div *ngIf="games?.length > 0">
-  <app-admin-affiche [games]="games"></app-admin-affiche>
+  <app-admin-affiche [games]="games" [totalResult]="totalResult" [gameSearch]="postGame"></app-admin-affiche>
 </div>
 <!--<div *ngIf="games?.length == 0; then changeFailMessage('aucun resultat')"></div>-->
