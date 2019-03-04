@@ -33,6 +33,7 @@ export class DataService {
   }
 
   createGameAdmin(game: Game) {
-    return this._http.post<Game>(`${environment.backendUrl}/game`, game);
+    console.log(game);
+    return this._http.post<Game>(`${environment.backendUrl}/game`, game, httpOptions);
   }
 }
