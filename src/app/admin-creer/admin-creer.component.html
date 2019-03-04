@@ -2,7 +2,7 @@
   <table>
     <tr>
       <td><label>Nom</label></td>
-      <td><input [(ngModel)]="game.name" name="val1"></td>
+      <td><input [(ngModel)]="game.name" name="val1" required></td>
     </tr>
     <tr>
       <td><label>Plateforme</label></td>
@@ -29,7 +29,7 @@
     </tr>
     <tr>
       <td><label>Prix</label></td>
-      <td><input [(ngModel)]="game.price" name="val4"></td>
+      <td><input [(ngModel)]="game.price" name="val4" required></td>
     </tr>
     <tr>
       <td><label>Image</label></td>
@@ -37,15 +37,11 @@
     </tr>
     <tr>
       <td><label>Description</label></td>
-      <td><input [(ngModel)]="game.description" name="val5"></td>
-    </tr>
-    <tr>
-      <td><label>Référence</label></td>
-      <td><input [(ngModel)]="game.reference" name="val6"></td>
+      <td><textarea [(ngModel)]='game.description' rows="10" cols="30"></textarea></td>                                    
     </tr>
     <tr>
       <td><label>Stock</label></td>
-      <td><input [(ngModel)]="game.stock" name="val6"></td>
+      <td><input [(ngModel)]="game.stock" name="val6" required></td>
     </tr>
     <tr>
       <td><label>Editeur</label></td>
@@ -53,9 +49,9 @@
     </tr>
     <tr>
       <td><label>Date parution</label></td>
-      <td><input [ngModel]="game.date" type="date" name="startDate"/></td>    
+      <td><input [ngModel]="game.date" type="date" name="startDate" /></td>
     </tr>
   </table>
-  <button type="submit">Envoyer</button>
+  <button type="submit" [disabled]="monForm.invalid">Envoyer</button>
   {{message}}
 </form>
