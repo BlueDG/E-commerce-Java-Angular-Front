@@ -23,7 +23,16 @@
 
       <td><button class="btn btn-secondary"><a [routerLink]="">Edit</a></button></td>
 
-      <td><button id="activated" class="btn btn-secondary">Activer/Desactiver</button></td>
+      <td>
+        <div *ngIf="obj.active == true;then actived else desactivated"></div>
+        <ng-template #actived>
+          <button class="btn btn-warning">Desactiver</button>
+        </ng-template>
+        <ng-template #desactivated>
+          <button class="btn btn-secondary">Activer</button>
+        </ng-template>
+
+      </td>
 
       <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
     </tr>
