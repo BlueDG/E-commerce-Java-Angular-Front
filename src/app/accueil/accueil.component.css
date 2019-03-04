@@ -1,17 +1,8 @@
 @font-face {
-    font-family: snes;
-    src: url(../../assets/fonts/SNES.ttf) format("opentype");
+    font-family: retro;
+    src: url(../../assets/fonts/retro.ttf) format("opentype");
   }
 
-@font-face {
-    font-family: genesis;
-    src: url(../../assets/fonts/genesis.ttf) format("opentype");
-}
-
-@font-face {
-    font-family: gameAll;
-    src: url(../../assets/fonts/game.ttf) format("opentype");
-}
 
 a {
     text-decoration: none;
@@ -31,31 +22,45 @@ a {
     height: 25rem;
     width: 100%;
     object-fit: cover;
+    object-position: bottom;
     
 }
 
 
-.ccaption-1 {
-    font-family: snes !important;
+h3, .h3, .ccaption{
+    font-size: 3rem;
+    font-family: retro;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 10px black;
 }
 
-.ccaption-2 {
-    font-family: genesis !important;
-}
+ 
 
-.ccaption-3 {
-    font-family: gameAll !important;
-} 
 
 
 /* css des deux rangées avec trois produits */
 
+/* css pour les boutons dans les rangées */
 
+
+ 
+
+
+
+
+
+
+
+
+
+/* retour du css des deux rangées avec trois produits */
 .ensemble-rangee-1 {
     background-image: url("../../assets/img/background-img-body.png");
     height: 25rem;
     padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
+    background-attachment: fixed;
 }
 
 .products-intro {
@@ -66,7 +71,8 @@ a {
     align-items: center;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: blueviolet;
+    background-color: white;
+    height: 350px;
 }
 
 .title-top-games {
@@ -74,7 +80,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
     width: 50%;
 }
 
@@ -82,12 +87,14 @@ a {
 
 
 .select-item {
-    background-color: green;
+    /*background-color: green;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin: 0 2% 0 2%;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
 }
 
 .img-container-main {
@@ -96,12 +103,9 @@ a {
     align-items: center;
     width: 60%;
     height: 40%;
-    transform: scale(1);
-    transition: all .3s ease-in-out;
-    background-color: grey;
 }
 
-.img-container-main:hover {
+.select-item:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -117,8 +121,6 @@ a {
     width: 100%;
     height: auto;
 }
-
-
 
 
 /*  */
