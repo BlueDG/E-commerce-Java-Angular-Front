@@ -29,7 +29,7 @@ export class AdminRechercheComponent implements OnInit {
   }
 
   submit() {
-    this._data.creerPostGame("1", this.postGame).subscribe(
+    this._data.searchGameAdmin("1", this.postGame).subscribe(
       value => {
         this.games = value.games;
         this.pages = value.pages;
