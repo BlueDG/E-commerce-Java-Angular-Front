@@ -1,68 +1,4 @@
 <form (ngSubmit)="submit()" #monForm="ngForm" autocomplete="off">
-<<<<<<< HEAD
-    <table>
-      <tr>
-        <td><label>Nom</label></td>
-        <td><input [(ngModel)]="gameModif.name" name="val1" value = {{gameModif.name}} required></td>
-      </tr>
-      <tr>
-        <td><label>Plateforme</label></td>
-        <td>
-          <select [(ngModel)]="gameModif.plateform" name="val2">
-            <option value="" disabled selected hidden>Selectionner...</option>
-            <option value={{plateforme[0]}}>gameboy</option>
-            <option value={{plateforme[1]}}>Mega Drive</option>
-            <option value={{plateforme[2]}}>NES</option>
-            <option value={{plateforme[3]}}>Playstation</option>
-            <option value={{plateforme[4]}}>Super Nintendo</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td><label>Genre</label></td>
-        <td>
-          <select [(ngModel)]="gameModif.genre" name="val3">
-            <option value="" disabled selected="selected" hidden>Selectionner...</option>
-            <option value={{genre[0]}}>Aventure</option>
-            <option value={{genre[1]}}>FPS</option>
-            <option value={{genre[2]}}>Plateforme</option>
-            <option value={{genre[3]}}>RPG</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td><label>Prix</label></td>
-        <td><input [(ngModel)]="gameModif.price" name="val4" required></td>
-      </tr>
-      <tr>
-        <td><label>Image</label></td>
-        <td><input [(ngModel)]="gameModif.image" name="val5"></td>
-      </tr>
-      <tr>
-        <td><label>Description</label></td>
-        <td><textarea [(ngModel)]='gameModif.description' rows="10" cols="30" name="val6"></textarea></td>
-      </tr>
-      <tr>
-        <td><label>Stock</label></td>
-        <td><input [(ngModel)]="gameModif.stock" name="val7" required></td>
-      </tr>
-      <tr>
-        <td><label>Editeur</label></td>
-        <td><input [(ngModel)]="gameModif.editor" name="val8"></td>
-      </tr>
-      <tr>
-        <td><label>Date parution</label></td>
-        <td><input [ngModel]="gameModif.date" type="date" name="startDate" /></td>
-      </tr>
-      <tr>
-        <td><input type="reset" [disabled]="monForm.pristine"></td>
-        <td><button type="submit" [disabled]="monForm.invalid">Envoyer</button></td>
-      </tr>
-    </table>
-    {{message}}
-    {{gameModif.name}}
-  </form>
-=======
   <table>
     <tr>
       <td><label>Nom</label></td>
@@ -139,4 +75,3 @@
     </tr>
   </table>
 </form>
->>>>>>> 24e124af3d7887fd3fb9e0fe757869764696d591

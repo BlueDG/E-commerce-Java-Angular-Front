@@ -1,9 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-<<<<<<< HEAD
-import { Game, Genre, Plateform } from 'src/models'
-=======
 import { Game, Genre, Plateform } from 'src/models';
->>>>>>> 24e124af3d7887fd3fb9e0fe757869764696d591
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,24 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdminModifierComponent implements OnInit {
 
-<<<<<<< HEAD
-  @Input() gameModif: Game;
-  
-  genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.PLATEFORME, Genre.RPG];
-  plateforme: Plateform[] = [Plateform.GAMEBOY, Plateform.MEGA_DRIVE, Plateform.NES, Plateform.PLAYSTATION, Plateform.SUPER_NINTENDO];
-  message: string = '';
-
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit() {
-    
-    
-  }
-
-
-  ngOnDestroy() {
-  
-=======
   //@Input() 
   gameToEdit: Game = {};
   genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.PLATEFORME, Genre.RPG];
@@ -45,7 +23,6 @@ export class AdminModifierComponent implements OnInit {
     })
     console.log(this.gameToEdit);
     //console.log(this.gameToEdit)
->>>>>>> 24e124af3d7887fd3fb9e0fe757869764696d591
   }
 
 }
