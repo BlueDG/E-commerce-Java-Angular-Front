@@ -37,7 +37,10 @@ export class DataService {
   }
 
   deleteGameAdmin(game: Game) {
-    console.log(game.id.toString());
     return this._http.delete(`${environment.backendUrl}/game/${game.id.toString()}`, httpOptions);
+  }
+
+  activateDeactivate(game: Game) {
+    return this._http.put<GamePaging>(`${environment.backendUrl}/game/activation`, game, httpOptions);
   }
 }

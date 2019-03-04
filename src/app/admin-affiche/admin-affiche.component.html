@@ -23,7 +23,8 @@
 
       <td><button class="btn btn-secondary"><a [routerLink]="">Edit</a></button></td>
 
-      <td><button id="activated" class="btn btn-secondary">Activer/Desactiver</button></td>
+      <td><button id="activated" class="btn btn-secondary" (click)="activateDeactivate(obj)">Activer/Desactiver</button>
+      </td>
 
       <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
     </tr>
