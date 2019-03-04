@@ -1,4 +1,5 @@
 <form (ngSubmit)="submit()" #monForm="ngForm" autocomplete="off">
+<<<<<<< HEAD
     <table>
       <tr>
         <td><label>Nom</label></td>
@@ -61,3 +62,81 @@
     {{message}}
     {{gameModif.name}}
   </form>
+=======
+  <table>
+    <tr>
+      <td><label>Nom</label></td>
+      <td><input class="form-control" [(ngModel)]="gameToEdit.name" name="val1" required>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Plateforme</label></td>
+      <td>
+        <select class="form-control" [(ngModel)]="gameToEdit.plateform" name="val2">
+          <option class="dropdown-item" value="" disabled selected hidden>Selectionner...</option>
+          <option class="dropdown-item" value={{plateforme[0]}}>gameboy</option>
+          <option class="dropdown-item" value={{plateforme[1]}}>Mega Drive</option>
+          <option class="dropdown-item" value={{plateforme[2]}}>NES</option>
+          <option class="dropdown-item" value={{plateforme[3]}}>Playstation</option>
+          <option class="dropdown-item" value={{plateforme[4]}}>Super Nintendo</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Genre</label></td>
+      <td>
+        <select class="form-control" [(ngModel)]="gameToEdit.genre" name="val3">
+          <option class="dropdown-item" value="" disabled selected="selected" hidden>Selectionner...</option>
+          <option class="dropdown-item" value={{genre[0]}}>Aventure</option>
+          <option class="dropdown-item" value={{genre[1]}}>FPS</option>
+          <option class="dropdown-item" value={{genre[2]}}>Plateforme</option>
+          <option class="dropdown-item" value={{genre[3]}}>RPG</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Prix</label></td>
+      <td><input class="form-control" [(ngModel)]="gameToEdit.price" name="val4" required>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Image</label></td>
+      <td><input class="form-control" [(ngModel)]="gameToEdit.image" name="val5"></td>
+    </tr>
+    <tr>
+      <td><label>Description</label></td>
+      <td><textarea class="form-control" [(ngModel)]='gameToEdit.description' rows="10" cols="30"
+          name="val6"></textarea></td>
+    </tr>
+    <tr>
+      <td><label>Stock</label></td>
+      <td><input class="form-control" [(ngModel)]="gameToEdit.stock" name="val7" required></td>
+    </tr>
+    <tr>
+      <td><label>Editeur</label></td>
+      <td><input class="form-control" [(ngModel)]="gameToEdit.editor" name="val8"></td>
+    </tr>
+    <tr>
+      <td><label>Date parution</label></td>
+      <!--<td><input class="form-control" [ngModel]="gameToEdit.date" type="date" /></td>-->
+
+      <td>
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="gameToEdit.date" ngbDatepicker
+              #d="ngbDatepicker" name="startDate">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d.toggle()"
+                type="button"></button>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><input class="btn btn-outline-dark" type="reset" [disabled]="monForm.pristine"></td>
+      <td><button class="btn btn-outline-dark" type="submit" [disabled]="monForm.invalid">Envoyer</button></td>
+    </tr>
+  </table>
+</form>
+>>>>>>> 24e124af3d7887fd3fb9e0fe757869764696d591
