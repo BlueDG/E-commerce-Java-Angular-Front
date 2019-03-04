@@ -21,8 +21,8 @@
 
       <td>{{obj.reference}}</td>
 
-      <td><button class="btn btn-secondary"><a [routerLink]="">Edit</a></button></td>
-
+      <td><button class="btn btn-secondary" [routerLink]="['/modif']" [queryParams]="{ gameModif : obj }">Edit</button>
+      
       <td><button id="activated" class="btn btn-secondary">Activer/Desactiver</button></td>
 
       <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
