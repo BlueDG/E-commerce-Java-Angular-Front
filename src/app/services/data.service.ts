@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User, UserLight, PostGame, GamePaging } from 'src/models';
+import { User, UserLight, PostGame, GamePaging, Game } from 'src/models';
 import { Observable, of } from 'rxjs';
 
 
@@ -30,5 +30,9 @@ export class DataService {
   searchGameAdmin(page: string, postGame: PostGame): Observable<GamePaging> {
     httpOptions.headers = httpOptions.headers.set('Page', page);
     return this._http.post<GamePaging>(`${environment.backendUrl}/game/search`, postGame, httpOptions);
+  }
+
+  createGameAdmin(game: Game) {
+    return this._http.post<Game>(`${environment.backendUrl}/game`, game);
   }
 }
