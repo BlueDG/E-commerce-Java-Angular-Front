@@ -51,4 +51,5 @@ export class AdminAfficheComponent implements OnInit {
       error => { }
     );
   }
+
 }
