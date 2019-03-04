@@ -10,6 +10,10 @@ a {
     text-shadow: 2px 2px 1px black;
 }
 
+.borderPerso{
+    border-bottom: 1px solid lightgrey;
+}
+
 /* css carousel */
 
 .img-carousel-container{
