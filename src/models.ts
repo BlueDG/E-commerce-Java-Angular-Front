@@ -29,7 +29,7 @@ export interface PostGame {
 
 export interface GamePaging {
     pages: number;
-    games: PostGame[];
+    games: Game[];
 }
 
 export interface Game {

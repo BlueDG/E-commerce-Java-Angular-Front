@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { PostGame } from 'src/models';
+import { PostGame, Game } from 'src/models';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -12,7 +12,7 @@ import { debounceTime } from 'rxjs/operators';
 export class AdminRechercheComponent implements OnInit {
 
   postGame: PostGame = {};
-  games: PostGame[] = [];
+  games: Game[] = [];
   pages: number;
 
   private _fail = new Subject<string>();
@@ -36,7 +36,7 @@ export class AdminRechercheComponent implements OnInit {
         }
         this.games = value.games;
         this.pages = value.pages;
-        console.log(value.games);
+        console.log(this.pages);
       },
       error => { this.changeFailMessage("Erreur lors de l'enregistrement."); }
     );

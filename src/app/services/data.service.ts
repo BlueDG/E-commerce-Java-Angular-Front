@@ -36,4 +36,8 @@ export class DataService {
     console.log(game);
     return this._http.post<Game>(`${environment.backendUrl}/game`, game, httpOptions);
   }
+
+  deleteGameAdmin(game: Game) {
+
+  }
 }
