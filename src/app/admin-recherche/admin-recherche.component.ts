@@ -31,6 +31,9 @@ export class AdminRechercheComponent implements OnInit {
   submit() {
     this._data.searchGameAdmin("1", this.postGame).subscribe(
       value => {
+        if (value.games.length == 0) {
+          this.changeFailMessage('aucun resultat');
+        }
         this.games = value.games;
         this.pages = value.pages;
         console.log(value.games);
