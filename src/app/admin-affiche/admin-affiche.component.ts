@@ -15,4 +15,8 @@ export class AdminAfficheComponent implements OnInit {
   ngOnInit() {
   }
 
+  newSearch() {
+    this.games = [];
+    window.location.reload();
+  }
 }
