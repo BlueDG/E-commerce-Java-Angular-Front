@@ -17,12 +17,13 @@ export class AdminRechercheComponent implements OnInit {
   constructor(private _data: DataService) { }
 
   ngOnInit() {
+    this.games = [];
   }
 
   submit() {
     this._data.creerPostGame("1", this.postGame).subscribe(
       value => {
-      this.message = 'Enregistrement réussi.';
+        this.message = 'Enregistrement réussi.';
         this.games = value.games;
         this.pages = value.pages;
         console.log(value.games);
@@ -31,10 +32,7 @@ export class AdminRechercheComponent implements OnInit {
     );
   }
 
-  newSearch() {
-    this.games = [];
-    window.location.reload();
-  }
+
 }
 
 
