@@ -3,15 +3,15 @@
     <table>
       <tr>
         <td><label>Nom</label></td>
-        <td><input class="form-control" [(ngModel)]="postGame.nom" name="val1"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.name" name="val1"></td>
       </tr>
       <tr>
         <td><label>Prix</label></td>
-        <td><input class="form-control" [(ngModel)]="postGame.prix" name="val2"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.price" name="val2"></td>
       </tr>
       <tr>
         <td><label>Plateforme</label></td>
-        <td><input class="form-control" [(ngModel)]="postGame.plateforme" name="val3"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.platform" name="val3"></td>
       </tr>
       <tr>
         <td><label>Référence</label></td>
@@ -24,6 +24,9 @@
 </div>
 
 
-<div *ngIf="games?.length != 0">
+<div *ngIf="games?.length != 0; else elseBlock">
   <app-admin-affiche [games]="games"></app-admin-affiche>
 </div>
+<ng-template #elseBlock>
+
+</ng-template>
