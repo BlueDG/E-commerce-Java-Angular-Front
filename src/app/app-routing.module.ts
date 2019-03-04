@@ -15,8 +15,8 @@ import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 const routes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'game', component: AdminRechercheComponent },
-  { path: 'game/create', component: AdminCreerComponent },
+  { path: 'search', component: AdminRechercheComponent },
+  { path: 'create', component: AdminCreerComponent },
   { path: 'produitPage', component: ProduitPageComponent },
   { path: 'produitListe', component: ProduitListeComponent },
   { path: '**', redirectTo: '' }

@@ -6,13 +6,24 @@
     </tr>
     <tr>
       <td><label>Plateforme</label></td>
-      <td><input [(ngModel)]="game.plateform" name="val2"></td>
+      <td>
+        <select [(ngModel)]="game.plateform" name="val2">
+          <option value=`{{plateforme[0]}}`>Gameboy</option>
+          <option value=`{{plateforme[1]}}`>Mega Drive</option>
+          <option value=`{{plateforme[2]}}`>NES</option>
+          <option value=`{{plateforme[3]}}`>Playstation</option>
+          <option value=`{{plateforme[4]}}`>Super Nintendo</option>
+        </select>
+      </td>
     </tr>
     <tr>
       <td><label>Genre</label></td>
       <td>
-        <select [(ngModel)]="game.genre" name = "val3">
-          <option value = "g">{{genre}}</option>
+        <select [(ngModel)]="game.genre" name="val3">
+          <option value=`{{genre[0]}}`>Aventure</option>
+          <option value=`{{genre[1]}}`>FPS</option>
+          <option value=`{{genre[2]}}`>Plateforme</option>
+          <option value=`{{genre[3]}}`>RPG</option>
         </select>
       </td>
     </tr>
