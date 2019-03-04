@@ -21,7 +21,7 @@
 
       <td>{{obj.reference}}</td>
 
-      <td><button class="btn btn-secondary"><a [routerLink]="">Edit</a></button></td>
+      <td><a routerLink="/modif" [queryParams]="{toEdit: obj | json}">Edit</a></td>
 
       <td>
         <div *ngIf="obj.active == true;then actived else desactivated"></div>
