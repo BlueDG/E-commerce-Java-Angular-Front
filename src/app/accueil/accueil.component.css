@@ -1,3 +1,24 @@
+@font-face {
+    font-family: snes;
+    src: url(../../assets/fonts/SNES.ttf) format("opentype");
+  }
+
+@font-face {
+    font-family: genesis;
+    src: url(../../assets/fonts/genesis.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: gameAll;
+    src: url(../../assets/fonts/game.ttf) format("opentype");
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 2px 2px 1px black;
+}
+
 /* css carousel */
 
 .img-carousel-container{
@@ -12,6 +33,20 @@
     object-fit: cover;
     
 }
+
+
+.ccaption-1 {
+    font-family: snes !important;
+}
+
+.ccaption-2 {
+    font-family: genesis !important;
+}
+
+.ccaption-3 {
+    font-family: gameAll !important;
+} 
+
 
 /* css des deux rangées avec trois produits */
 

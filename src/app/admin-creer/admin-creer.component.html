@@ -8,7 +8,7 @@
       <td><label>Plateforme</label></td>
       <td>
         <select [(ngModel)]="game.plateform" name="val2">
-          <option value="" disabled selected hidden >Selectionner...</option>
+          <option value="" disabled selected hidden>Selectionner...</option>
           <option value={{plateforme[0]}}>Gameboy</option>
           <option value={{plateforme[1]}}>Mega Drive</option>
           <option value={{plateforme[2]}}>NES</option>
@@ -53,8 +53,10 @@
       <td><label>Date parution</label></td>
       <td><input [ngModel]="game.date" type="date" name="startDate" /></td>
     </tr>
+    <tr>
+      <td><input type="reset" [disabled]="monForm.pristine"></td>
+      <td><button type="submit" [disabled]="monForm.invalid">Envoyer</button></td>
+    </tr>
   </table>
-  <input type="reset" [disabled]="monForm.pristine">
-  <button type="submit" [disabled]="monForm.invalid">Envoyer</button>
   {{message}}
 </form>
