@@ -12,7 +12,6 @@ export class AdminAfficheComponent implements OnInit {
 
   @Input() games: PostGame[];
 
-
   constructor() { }
 
   ngOnInit() {
