@@ -1,8 +1,15 @@
 
 
 /* CSS POUR HEADER TOP */
-.header-top {
+
+.background-header{
+
 	background-image: url(src/assets/img/wallpaper-header.png);
+	background-position: center;
+}
+
+.header-top {
+	
     background-repeat: no-repeat;
   	background-size: auto;
     display: flex;
@@ -80,7 +87,7 @@ a {
 
 .header-down {
     padding: 0% 2%;
-    border-bottom: 1px solid lightgrey;
+		border-bottom: 1px solid lightgrey;
 }
 
 @font-face {
