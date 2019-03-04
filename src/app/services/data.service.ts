@@ -10,7 +10,8 @@ const URL_BACKEND = environment.backendUrl;
 const httpOptions = {
   headers: new HttpHeaders({
     "Content-Type": "application/json"
-  })
+  }),
+  withCredentials: true
 };
 
 @Injectable({
@@ -42,5 +43,10 @@ export class DataService {
 
   activateDeactivate(game: Game) {
     return this._http.put<GamePaging>(`${environment.backendUrl}/game/activation`, game, httpOptions);
+  }
+
+  searchAllGame(page: string): Observable<GamePaging> {
+    httpOptions.headers = httpOptions.headers.set('Page', page);
+    return this._http.get<GamePaging>(`${environment.backendUrl}/visitor`, httpOptions);
   }
 }
