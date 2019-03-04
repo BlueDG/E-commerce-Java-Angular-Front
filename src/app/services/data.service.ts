@@ -27,10 +27,8 @@ export class DataService {
     return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
   }
 
-  creerPostGame(page: string, postGame: PostGame) : Observable<GamePaging>{
+  searchGameAdmin(page: string, postGame: PostGame): Observable<GamePaging> {
     httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.post<GamePaging>(`${environment.backendUrl}/game`, postGame, httpOptions);
+    return this._http.post<GamePaging>(`${environment.backendUrl}/game/search`, postGame, httpOptions);
   }
-
-
 }

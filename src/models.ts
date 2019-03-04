@@ -22,7 +22,7 @@ export enum Genre {
 
 export interface PostGame {
     name?: string;
-    price?: number;
+    price?: string;
     plateform?: string;
     reference?: string;
 }
