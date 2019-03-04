@@ -3,25 +3,26 @@
     <table>
       <tr>
         <td><label>Nom</label></td>
-        <td><input [(ngModel)]="postGame.nom" name="val1"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.nom" name="val1"></td>
       </tr>
       <tr>
         <td><label>Prix</label></td>
-        <td><input [(ngModel)]="postGame.prix" name="val2"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.prix" name="val2"></td>
       </tr>
       <tr>
         <td><label>Plateforme</label></td>
-        <td><input [(ngModel)]="postGame.plateforme" name="val3"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.plateforme" name="val3"></td>
       </tr>
       <tr>
         <td><label>Référence</label></td>
-        <td><input [(ngModel)]="postGame.reference" name="val4"></td>
+        <td><input class="form-control" [(ngModel)]="postGame.reference" name="val4"></td>
       </tr>
     </table>
-    <button type="submit">Envoyer</button>
-    {{message}}
+    <button class="btn btn-outline-dark" type="submit">Envoyer</button>
+    <ngb-alert *ngIf="failMessage" type="danger" (close)="failMessage = null">{{ failMessage }}</ngb-alert>
   </form>
 </div>
+
 
 <div *ngIf="games?.length != 0">
   <app-admin-affiche [games]="games"></app-admin-affiche>
