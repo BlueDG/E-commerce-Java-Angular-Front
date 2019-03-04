@@ -1,4 +1,4 @@
-<form (ngSubmit)="submit()" #monForm="ngForm">
+<form (ngSubmit)="submit()" #monForm="ngForm" autocomplete="off">
   <table>
     <tr>
       <td><label>Nom</label></td>
@@ -8,6 +8,7 @@
       <td><label>Plateforme</label></td>
       <td>
         <select [(ngModel)]="game.plateform" name="val2">
+          <option value="" disabled selected hidden >Selectionner...</option>
           <option value={{plateforme[0]}}>Gameboy</option>
           <option value={{plateforme[1]}}>Mega Drive</option>
           <option value={{plateforme[2]}}>NES</option>
@@ -20,6 +21,7 @@
       <td><label>Genre</label></td>
       <td>
         <select [(ngModel)]="game.genre" name="val3">
+          <option value="" disabled selected="selected" hidden>Selectionner...</option>
           <option value={{genre[0]}}>Aventure</option>
           <option value={{genre[1]}}>FPS</option>
           <option value={{genre[2]}}>Plateforme</option>
@@ -37,7 +39,7 @@
     </tr>
     <tr>
       <td><label>Description</label></td>
-      <td><textarea [(ngModel)]='game.description' rows="10" cols="30"></textarea></td>                                    
+      <td><textarea [(ngModel)]='game.description' rows="10" cols="30"></textarea></td>
     </tr>
     <tr>
       <td><label>Stock</label></td>
@@ -52,6 +54,7 @@
       <td><input [ngModel]="game.date" type="date" name="startDate" /></td>
     </tr>
   </table>
+  <input type="reset" [disabled]="monForm.pristine">
   <button type="submit" [disabled]="monForm.invalid">Envoyer</button>
   {{message}}
 </form>
