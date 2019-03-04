@@ -14,6 +14,7 @@ export class AdminRechercheComponent implements OnInit {
   postGame: PostGame = {};
   games: Game[] = [];
   pages: number;
+  totalResult: number;
 
   private _fail = new Subject<string>();
   failMessage: string;
@@ -35,8 +36,8 @@ export class AdminRechercheComponent implements OnInit {
           this.changeFailMessage('aucun resultat');
         }
         this.games = value.games;
-        this.pages = value.pages;
-        console.log(this.pages);
+        this.totalResult = value.pages;
+        console.log(this.totalResult);
       },
       error => { this.changeFailMessage("Erreur lors de l'enregistrement."); }
     );

@@ -1,4 +1,6 @@
 <div *ngIf="games?.length == 0">
+
+  <a class="nav-link" routerLink="/create">Ajouter un produit</a>
   <form (ngSubmit)="submit()" #monForm="ngForm">
     <table>
       <tr>
