@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-produit-page',
@@ -11,7 +10,7 @@ import { DataService } from '../services/data.service';
 export class ProduitPageComponent implements OnInit {
 
   gameToShow : Game;
-  constructor(private _route: ActivatedRoute, private _data: DataService) { }
+  constructor(private _route: ActivatedRoute) { }
 
   ngOnInit() {
     this._route.queryParams.subscribe(params => {
