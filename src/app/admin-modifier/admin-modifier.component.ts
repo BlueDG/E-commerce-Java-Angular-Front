@@ -12,7 +12,7 @@ export class AdminModifierComponent implements OnInit {
 
   //@Input() 
   gameToEdit: Game = {};
-  genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.PLATEFORME, Genre.RPG];
+  genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.ARCADE, Genre.RPG, Genre.SPORT];
   plateforme: Plateform[] = [Plateform.GAMEBOY, Plateform.MEGA_DRIVE, Plateform.NES, Plateform.PLAYSTATION, Plateform.SUPER_NINTENDO];
   message: string = '';
 

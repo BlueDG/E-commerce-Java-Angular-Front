@@ -59,8 +59,7 @@
       <td>
         <div class="form-group">
           <div class="input-group">
-            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="gameToEdit.date" ngbDatepicker
-              #d="ngbDatepicker" name="startDate">
+            <input class="form-control" [(ngModel)]="gameToEdit.date" ngbDatepicker #d="ngbDatepicker" name="startDate">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d.toggle()"
                 type="button"></button>

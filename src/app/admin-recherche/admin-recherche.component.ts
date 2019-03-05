@@ -37,7 +37,6 @@ export class AdminRechercheComponent implements OnInit {
         }
         this.games = value.games;
         this.totalResult = value.pages;
-        console.log(this.totalResult);
       },
       error => { this.changeFailMessage("Erreur lors de l'enregistrement."); }
     );
