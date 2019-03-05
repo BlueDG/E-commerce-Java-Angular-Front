@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'produitPage', component: ProduitPageComponent },
   { path: 'produitListe', component: ProduitListeComponent },
   { path: 'modif', component: AdminModifierComponent },
-  { path: 'visite', component: VisitorAfficheComponent },
+  { path: 'pageprod', component: ProduitPageComponent },
   { path: '**', redirectTo: '' }
 
 ];

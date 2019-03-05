@@ -19,12 +19,13 @@
 
       <td>{{obj.plateform}}</td>
 
-      <td><button class="btn btn-secondary" (click)="afficherDetails(obj)">Détails</button></td>
+      <td><button class="btn btn-secondary"  routerLink="/pageprod" [queryParams]="{toShow: obj | json}">Détails</button></td>
 
   </tbody>
 </table>
 <ngb-pagination class="d-flex justify-content-center" [collectionSize]='totalResult' [(page)]="page"
   aria-label="Default pagination" (pageChange)="printNewPage()"></ngb-pagination>
-<div class="d-flex justify-content-center">
+
+  <div class="d-flex justify-content-center">
   <button class="btn btn-outline-dark" (click)="newSearch()">Nouvelle recherche</button>
 </div>
