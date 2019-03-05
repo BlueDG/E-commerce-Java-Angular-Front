@@ -5,6 +5,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Platform</th>
+      <th scope="col">Détails</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,8 @@
       <td>{{obj.price}} €</td>
 
       <td>{{obj.plateform}}</td>
+
+      <td><button class="btn btn-secondary" (click)="afficherDetails(obj)">Détails</button></td>
 
   </tbody>
 </table>

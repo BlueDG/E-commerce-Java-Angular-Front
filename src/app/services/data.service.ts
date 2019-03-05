@@ -33,15 +33,15 @@ export class DataService {
     return this._http.post<GamePaging>(`${environment.backendUrl}/game/search`, postGame, httpOptions);
   }
 
-  createGameAdmin(game: Game) {
+  createGameAdmin(game: Game): Observable<Game> {
     return this._http.post<Game>(`${environment.backendUrl}/game`, game, httpOptions);
   }
 
-  deleteGameAdmin(game: Game) {
+  deleteGameAdmin(game: Game): Observable<Game> {
     return this._http.delete(`${environment.backendUrl}/game/${game.id.toString()}`, httpOptions);
   }
 
-  activateDeactivate(game: Game) {
+  activateDeactivate(game: Game): Observable<GamePaging> {
     return this._http.put<GamePaging>(`${environment.backendUrl}/game/activation`, game, httpOptions);
   }
 
@@ -50,9 +50,9 @@ export class DataService {
     return this._http.get<GamePaging>(`${environment.backendUrl}/visitor`, httpOptions);
   }
 
-  updateGameAdmin(game: Game){
+  updateGameAdmin(game: Game): Observable<Game> {
     return this._http.put<Game>(`${environment.backendUrl}/game`, game, httpOptions);
   }
 }
 
-  
+
