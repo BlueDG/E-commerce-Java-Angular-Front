@@ -10,6 +10,11 @@ export enum Credential {
 
 export interface User extends UserLight {
     email: string;
+    firstname: string;
+    lastname: string;
+    adress: string;
+    phone: string;
+    birthday: Date;
 }
 
 export enum Plateform {
