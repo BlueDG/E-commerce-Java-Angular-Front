@@ -1,22 +1,22 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th scope="col">Image</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Platform</th>
-      <th scope="col">Reference</th>
     </tr>
   </thead>
   <tbody>
 
     <tr *ngFor='let obj of games'>
+      <td><img [src]="obj.image" class="rounded" height="200" width="auto"></td>
+
       <td>{{obj.name}}</td>
 
       <td>{{obj.price}} €</td>
 
       <td>{{obj.plateform}}</td>
-
-      <td>{{obj.reference}}</td>
 
   </tbody>
 </table>

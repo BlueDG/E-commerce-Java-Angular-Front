@@ -14,10 +14,10 @@ export class AccueilComponent implements OnInit {
 
   constructor(config: NgbCarouselConfig) { 
     // customize default values of carousels used by this component tree
-    config.interval = 10000;
+    config.interval = 20000;
     config.wrap = false;
     config.keyboard = false;
-    config.pauseOnHover = false;
+    config.pauseOnHover = true;
   }
 
   ngOnInit() {
