@@ -1,36 +1,36 @@
 <div>
-  <section class="section-product-line1">
-      <div class="product-img">
+  <section class="row section-product-line1">
+      <div class="col-6 product-img">
           <div class="img-container">
-              <div>{{gameToShow.image}}</div>
+              <div><img src={{gameToShow.image}}></div>
           </div>
       </div>
-      <div class="product-info">
-          <h1></h1>
+      <div class="col-6 product-info">
+          <h1>{{gameToShow.name}}</h1>
           <div>
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>PLATEFORME : {{gameToShow.plateform}}</li>
+                <li>GENRE : {{gameToShow.genre}}</li>
+                <li>EDITEUR : {{gameToShow.editor}}</li>
+                <li>DATE DE SORTIE : {{gameToShow.date}}</li>
+                <li>REFERENCE : {{gameToShow.reference}}</li>
               </ul>
           </div>
       </div>
   </section>
 
-  <section class="section-product-line2">
-      <div class="line2">
-          <p></p>
-          <p></p>
+  <section class="row section-product-line2">
+      <div class="col-12 line2">
+          <p>STOCK : {{gameToShow.stock}} PRIX : {{gameToShow.price}}€</p>
           <label for="game">Quantité</label>
           <input type="number" id="game" name="game" min="1" max="20">
           <button type="button">Ajouter au panier</button>
       </div>
   </section>
 
-  <section class="section-product-line3">
-      <div class="details">
-
+  <section class="row section-product-line3">
+      <div class="col-12 details">
+          <p>{{gameToShow.description}}</p>
       </div>
   </section>
 </div>
