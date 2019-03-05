@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Credential, PostGame, Plateform, Genre } from 'src/models';
-import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -10,21 +10,19 @@ import { DataService } from '../services/data.service';
 export class MenuComponent implements OnInit {
 
   credential: string = Credential.VISITOR;
-  game: PostGame;
 
+  name: string;
   genre: string[] = ['AVENTURE', 'FPS', 'ARCADE', 'RPG', 'SPORT'];
   plateforme: string[] = ['GAMEBOY', 'MEGA_DRIVE', 'NES', 'PLAYSTATION', 'SUPER_NINTENDO'];
 
-  constructor(private _data: DataService) { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
     this.credential = sessionStorage.getItem("credential")
   }
 
   submit() {
-    this._data.searchGameVisitor('1', this.game).subscribe(
-      data => { console.log("reussie"); },
-      error => { console.log("pas réussie"); }
-    )
+    console.log('HERE');
+    this._router.navigate(['/visite', { name: this.name }])
   }
 }
