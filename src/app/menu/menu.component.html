@@ -38,8 +38,8 @@
 
         <nav class=" nav1 navbar navbar-expand-sm">
             <!-- icônes rechercher, créer et se connecter au profil, panier -->
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <form class="form-inline" (ngSubmit)="submit()">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="name" name="n1">
             </form>
             <div *ngIf=" credential=='VISITOR'">
                 <app-login></app-login>

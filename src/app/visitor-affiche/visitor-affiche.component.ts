@@ -13,6 +13,7 @@ export class VisitorAfficheComponent implements OnInit {
 
   @Input() plateform: string;
   @Input() genre: string;
+  @Input() name: string;
 
   games: Game[];
   page: number;
@@ -24,13 +25,13 @@ export class VisitorAfficheComponent implements OnInit {
 
   ngOnInit() {
 
-    this._route.queryParams.subscribe(params => { this.plateform = params.plateform as string; this.genre = params.genre as string; })
+    this._route.queryParams.subscribe(params => { this.plateform = params.plateform as string; this.genre = params.genre as string; this.name = params.name as string })
 
     let game: PostGame = {
+      name: this.name,
       plateform: this.plateform,
       genre: this.genre
     }
-
     this._data.searchGameVisitor('1', game).subscribe(
       value => {
         if (value.games.length == 0) {

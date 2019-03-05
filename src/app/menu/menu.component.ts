@@ -22,7 +22,6 @@ export class MenuComponent implements OnInit {
   }
 
   submit() {
-    console.log('HERE');
-    this._router.navigate(['/visite', { name: this.name }])
+    this._router.navigate(['/visite'], { queryParams: { name: this.name } });
   }
 }
