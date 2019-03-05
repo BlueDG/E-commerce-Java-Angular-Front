@@ -49,4 +49,10 @@ export class DataService {
     httpOptions.headers = httpOptions.headers.set('Page', page);
     return this._http.get<GamePaging>(`${environment.backendUrl}/visitor`, httpOptions);
   }
+
+  updateGameAdmin(game: Game){
+    return this._http.put<Game>(`${environment.backendUrl}/game`, game, httpOptions);
+  }
 }
+
+  

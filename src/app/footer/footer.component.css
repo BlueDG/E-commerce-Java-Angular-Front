@@ -1,12 +1,25 @@
 /* *****	Footer CSS		***** */
+
+@font-face {
+    font-family: game;
+    src: url(../../assets/fonts/game.ttf) format("opentype");
+  }
+
+* {
+    font-family: retro;
+    text-transform: uppercase;
+    color: #FFEB94;
+    text-shadow: 2px 2px 1px black;
+}
+
 .footer {
     background-image: url(src/assets/img/wallpaper-footer.png);
     background-position: bottom;
     background-repeat: no-repeat;
-  background-size: auto;
+    background-size: auto;
     justify-content: space-around;
     border-top: 1px solid lightgrey;
-	padding-top: 30%;
+	padding-top: 25%;
 }
 
 .section-footer li{
