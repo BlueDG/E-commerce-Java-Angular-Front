@@ -5,12 +5,6 @@
     src: url(../../assets/fonts/game.ttf) format("opentype");
   }
 
-* {
-    font-family: retro;
-    text-transform: uppercase;
-    color: #FFEB94;
-    text-shadow: 2px 2px 1px black;
-}
 
 .footer {
     background-image: url(src/assets/img/wallpaper-footer.png);
@@ -19,7 +13,17 @@
     background-size: auto;
     justify-content: space-around;
     border-top: 1px solid lightgrey;
-	padding-top: 25%;
+    padding-top: 25%;
+    font-family: retro;
+    text-transform: uppercase;
+    color: #FFEB94;
+    text-shadow: 2px 2px 1px black;
+}
+
+.about-us {
+
+    text-transform: uppercase;
+    color: #FFEB94;
 }
 
 .section-footer li{
@@ -28,4 +32,16 @@
 
 .section-footer a:hover {
     font-weight: bold;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.social a {
+    text-decoration: none;
+    color: #FFEB94;
+
 }
