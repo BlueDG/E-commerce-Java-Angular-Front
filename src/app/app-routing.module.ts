@@ -11,6 +11,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ProduitPageComponent } from './produit-page/produit-page.component';
 import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
+import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent },
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'produitPage', component: ProduitPageComponent },
   { path: 'produitListe', component: ProduitListeComponent },
   { path: 'modif', component: AdminModifierComponent },
-  { path: 'pageprod', component: ProduitPageComponent},
+  { path: 'pageprod', component: ProduitPageComponent },
   { path: '**', redirectTo: '' }
 
 ];
