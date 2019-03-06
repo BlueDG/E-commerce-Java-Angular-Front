@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User, UserLight, PostGame, GamePaging, Game } from 'src/models';
+import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order } from 'src/models';
 import { Observable, of } from 'rxjs';
 
 
@@ -68,6 +68,11 @@ export class DataService {
 
   updateProfil(user : User): Observable<User>{
     return this._http.put<User>(`${environment.backendUrl}/user`, user, httpOptions);
+  }
+  
+  createOrder(order: Order) {
+    console.log(order)
+    return this._http.post<GameCart[]>(`${environment.backendUrl}/order`, order, httpOptions);
   }
 }
 

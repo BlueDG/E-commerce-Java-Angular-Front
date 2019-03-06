@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from 'src/models';
+import { Game, GameCart } from 'src/models';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,8 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 export class ProduitPageComponent implements OnInit {
 
   gameToShow: Game;
+  purchaseList: GameCart[];
   dateToShow: Date;
   date: string;
+  gameToAdd: GameCart = {
+    game: this.gameToShow,
+    quantity: 0
+  };
+
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -20,6 +26,14 @@ export class ProduitPageComponent implements OnInit {
       this.dateToShow = new Date(this.gameToShow.date);
       this.date = `${this.dateToShow.getFullYear()}/${this.dateToShow.getMonth()}/${this.dateToShow.getDay()}`;
     })
+  }
+
+  addCart() {
+    this.purchaseList = JSON.parse(localStorage.getItem("purchaseList")) as GameCart[];
+    this.gameToAdd.game = this.gameToShow;
+
+    this.purchaseList.push(this.gameToAdd);
+    localStorage.setItem("purchaseList", JSON.stringify(this.purchaseList));
   }
 
 }
