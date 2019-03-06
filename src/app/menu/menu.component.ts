@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Credential, PostGame, Plateform, Genre } from 'src/models';
+import { Credential } from 'src/models';
 import { Router } from '@angular/router';
 
 @Component({
@@ -18,10 +18,19 @@ export class MenuComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit() {
-    this.credential = sessionStorage.getItem("credential")
+    this.credential = localStorage.getItem("credential");
   }
 
   submit() {
     this._router.navigate(['/visite'], { queryParams: { name: this.name } });
   }
+
+  deco() {
+    localStorage.setItem("credential", "VISITOR");
+    this.credential = localStorage.getItem("credential");
+    localStorage.setItem("username", "");
+    window.location.reload();
+  }
 }
+
+//sessionstorage.getItem(credential);

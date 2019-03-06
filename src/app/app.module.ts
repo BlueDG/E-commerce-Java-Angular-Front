@@ -19,6 +19,8 @@ import { AdminCreerComponent } from './admin-creer/admin-creer.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { CartComponent } from './cart/cart.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     AdminModifierComponent,
     VisitorAfficheComponent,
     CreateAccountComponent,
+    CartComponent,
+    ProfilComponent,
 
 
   ],

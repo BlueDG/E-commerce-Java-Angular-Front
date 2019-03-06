@@ -41,14 +41,22 @@
             <form class="form-inline" (ngSubmit)="submit()">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="name" name="n1">
             </form>
-            <div *ngIf=" credential=='VISITOR'">
+            <div *ngIf="credential=='ADMIN' || credential == 'REGISTER'; else notLogged">
+                <!--LOGGED-->
+                <div ngbDropdown>
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i
+                            class="fas fa-user"></i></button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/profil" style="width : 160px;">Profil</button>
+                        <button ngbDropdownItem class="btn btn-outline-dark" (click)="deco()" style="width : 160px;">Deconnexion</button>
+                    </div>
+                </div>
+            </div>
+            <ng-template #notLogged>
                 <app-login></app-login>
-            </div>
-            <div *ngIf=" credential !='VISITOR'">
-                <i class=" fas fa-user"></i>
-            </div>
+            </ng-template>
             <div>
-                <a class="navbar-brand" routerLink="#"><i class="fas fa-cart-arrow-down"></i></a>
+                <app-cart></app-cart>
             </div>
             <div>
                 <i class="fas fa-sign-out-alt"></i>
