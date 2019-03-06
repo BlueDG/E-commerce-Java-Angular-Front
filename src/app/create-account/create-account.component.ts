@@ -11,8 +11,8 @@ export class CreateAccountComponent implements OnInit {
 
   user: User = {};
   message: string = '';
-  constructor(private _data: DataService) { 
-   
+  constructor(private _data: DataService) {
+
   }
 
   ngOnInit() {
