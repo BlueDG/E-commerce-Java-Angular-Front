@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
         this.user.id = succes.id;
         localStorage.setItem('username', this.user.username);
         localStorage.setItem('credential', this.user.credential);
-        localStorage.setItem('userId', this.user.id);
+        localStorage.setItem('userId', "" + this.user.id);
         console.log(this.user);
         this.changeSuccessMessage();
       }, error => {

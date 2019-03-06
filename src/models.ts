@@ -1,5 +1,5 @@
 export interface UserLight {
-    id?: string;
+    id?: number;
     username?: string;
     password?: string;
     credential?: Credential;
