@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    sessionStorage.setItem('token', '');
+    localStorage.setItem('credential', 'VISITOR');
 
 
     this._success.subscribe((message) => this.successMessage = message);
@@ -54,8 +54,8 @@ export class LoginComponent implements OnInit {
     this._serv.login(this.user).subscribe(
       succes => {
         this.user.credential = succes.credential;
-        sessionStorage.setItem('username', this.user.username);
-        sessionStorage.setItem('credential', this.user.credential);
+        localStorage.setItem('username', this.user.username);
+        localStorage.setItem('credential', this.user.credential);
         console.log(this.user);
         this.changeSuccessMessage();
       }, error => {
