@@ -20,6 +20,7 @@ import { AdminModifierComponent } from './admin-modifier/admin-modifier.componen
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
 import { CartComponent } from './cart/cart.component';
 import { ProfilComponent } from './profil/profil.component';
+import { ListOrderComponent } from './list-order/list-order.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ProfilComponent } from './profil/profil.component';
     VisitorAfficheComponent,
     CartComponent,
     ProfilComponent,
+    ListOrderComponent,
 
 
   ],

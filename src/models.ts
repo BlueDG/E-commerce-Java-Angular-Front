@@ -1,6 +1,7 @@
 export interface UserLight {
-    username: string;
-    password: string;
+    id?: string;
+    username?: string;
+    password?: string;
     credential: Credential;
 }
 
@@ -51,4 +52,16 @@ export interface Game {
     editor?: string;
     date?: Date;
     active?: boolean;
+}
+
+export interface GameCart {
+    game: Game;
+    quantity: number;
+}
+
+export interface Order {
+    id?: number;
+    games: GameCart[];
+    user: UserLight;
+    orderDate: Date;
 }

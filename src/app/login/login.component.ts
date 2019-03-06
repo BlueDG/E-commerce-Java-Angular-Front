@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { UserLight } from 'src/models';
+import { UserLight, Game, GameCart } from 'src/models';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
   providers: [NgbModalConfig, NgbModal]
 })
 export class LoginComponent implements OnInit {
-  user: UserLight = { username: '', password: '', credential: null };
+  user: UserLight = { id: null, username: '', password: '', credential: null };
+  purchaseList: GameCart[] = [];
 
   private _success = new Subject<string>();
   private _fail = new Subject<string>();
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     localStorage.setItem('credential', 'VISITOR');
+    localStorage.setItem('purchaseList', JSON.stringify(this.purchaseList))
 
 
     this._success.subscribe((message) => this.successMessage = message);
@@ -54,8 +56,10 @@ export class LoginComponent implements OnInit {
     this._serv.login(this.user).subscribe(
       succes => {
         this.user.credential = succes.credential;
+        this.user.id = succes.id;
         localStorage.setItem('username', this.user.username);
         localStorage.setItem('credential', this.user.credential);
+        localStorage.setItem('userId', this.user.id);
         console.log(this.user);
         this.changeSuccessMessage();
       }, error => {
