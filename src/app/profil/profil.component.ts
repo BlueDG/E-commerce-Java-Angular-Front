@@ -8,7 +8,6 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
-
   user: User = {};
   username: string = "";
   date: string;
