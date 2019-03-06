@@ -28,7 +28,7 @@ export class DataService {
   }
 
   createAccount(user: User) {
-    // return this._http.post<User>(`${environment.backendUrl}/create-account`, user, httpOptions);
+    return this._http.post<User>(`${environment.backendUrl}/create-account`, user, httpOptions);
   }
 
   searchGameAdmin(page: string, postGame: PostGame): Observable<GamePaging> {
