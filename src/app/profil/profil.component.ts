@@ -11,6 +11,8 @@ export class ProfilComponent implements OnInit {
 
   user: User = {};
   username: string = "";
+  date: string;
+  dateToShow: Date;
 
   constructor(private _data: DataService) { }
 
@@ -20,6 +22,8 @@ export class ProfilComponent implements OnInit {
       value => {
         this.user = value;
         console.log(this.user);
+        this.dateToShow = new Date(this.user.birthday);
+        this.date = `${this.dateToShow.getFullYear()}/${this.dateToShow.getMonth()}/${this.dateToShow.getDay()}`;
       },
       error => {
         console.log('Erreur ! : ' + error);

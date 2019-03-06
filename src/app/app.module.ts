@@ -21,6 +21,7 @@ import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.compo
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { CartComponent } from './cart/cart.component';
 import { ProfilComponent } from './profil/profil.component';
+import { ProfilModifierComponent } from './profil-modifier/profil-modifier.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProfilComponent } from './profil/profil.component';
     CreateAccountComponent,
     CartComponent,
     ProfilComponent,
+    ProfilModifierComponent,
 
 
   ],

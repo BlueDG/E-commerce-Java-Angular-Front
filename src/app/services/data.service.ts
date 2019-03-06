@@ -65,6 +65,10 @@ export class DataService {
   searchUserByUsername(username : string): Observable<User>{
     return this._http.post<User>(`${environment.backendUrl}/user`, username, httpOptions);
   }
+
+  updateProfil(user : User): Observable<User>{
+    return this._http.put<User>(`${environment.backendUrl}/user`, user, httpOptions);
+  }
 }
 
 

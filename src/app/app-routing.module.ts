@@ -14,6 +14,7 @@ import { AdminModifierComponent } from './admin-modifier/admin-modifier.componen
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
 import { CreateAccountComponent } from './create-account/create-account.component'; 
 import { ProfilComponent } from './profil/profil.component';
+import { ProfilModifierComponent } from './profil-modifier/profil-modifier.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'pageprod', component: ProduitPageComponent },
   { path: 'create-account', component: CreateAccountComponent },
   { path: 'profil', component: ProfilComponent},
+  { path: 'profil-modif', component: ProfilModifierComponent},
   { path: '**', redirectTo: '' }
 
 ];
