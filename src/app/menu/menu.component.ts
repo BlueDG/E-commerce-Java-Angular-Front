@@ -18,10 +18,12 @@ export class MenuComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit() {
-    this.credential = sessionStorage.getItem("credential")
+    this.credential = sessionStorage.getItem("credential");
   }
 
   submit() {
     this._router.navigate(['/visite'], { queryParams: { name: this.name } });
   }
 }
+
+//sessionstorage.getItem(credential);

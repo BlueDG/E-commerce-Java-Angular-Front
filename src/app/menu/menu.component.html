@@ -42,14 +42,26 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="name" name="n1">
             </form>
             <div *ngIf="credential=='ADMIN' || credential == 'REGISTER'; else notLogged">
-                <i class=" fas fa-user"></i>
+                <!--LOGGED-->
+                <div class="row">
+                    <div class="col">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle
+                                dropdown</button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem>Action - 1</button>
+                                <button ngbDropdownItem>Another Action</button>
+                                <button ngbDropdownItem>Something else is here</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <ng-template #notLogged>
-
                 <app-login></app-login>
             </ng-template>
             <div>
-                <a class="navbar-brand" routerLink="#"><i class="fas fa-cart-arrow-down"></i></a>
+                <app-cart></app-cart>
             </div>
             <div>
                 <i class="fas fa-sign-out-alt"></i>
