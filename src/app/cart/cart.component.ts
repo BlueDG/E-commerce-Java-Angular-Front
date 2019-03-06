@@ -63,6 +63,7 @@ export class CartComponent implements OnInit {
     this._serv.createOrder(this.order = {
       games: this.purchaseList,
       user: {
+        id: Number(localStorage.getItem("userId")),
         username: localStorage.getItem("username"),
         credential: localStorage.getItem("credential") as Credential
       },
