@@ -12,6 +12,7 @@ import { ProduitPageComponent } from './produit-page/produit-page.component';
 import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'modif', component: AdminModifierComponent },
   { path: 'visite', component: VisitorAfficheComponent },
   { path: 'pageprod', component: ProduitPageComponent },
+  { path: 'profil', component: ProfilComponent},
   { path: '**', redirectTo: '' }
 
 ];

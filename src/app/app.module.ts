@@ -19,6 +19,7 @@ import { AdminCreerComponent } from './admin-creer/admin-creer.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
 import { CartComponent } from './cart/cart.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CartComponent } from './cart/cart.component';
     AdminModifierComponent,
     VisitorAfficheComponent,
     CartComponent,
+    ProfilComponent,
 
 
   ],
