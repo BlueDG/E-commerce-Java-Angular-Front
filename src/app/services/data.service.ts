@@ -24,8 +24,11 @@ export class DataService {
   login(user: UserLight) {
     btoa(user.username + ':' + user.password);
     httpOptions.headers = httpOptions.headers.set('Authorization', 'Basic ' + btoa(user.username + ':' + user.password));
-
     return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
+  }
+
+  createAccount(user: User) {
+    // return this._http.post<User>(`${environment.backendUrl}/create-account`, user, httpOptions);
   }
 
   searchGameAdmin(page: string, postGame: PostGame): Observable<GamePaging> {

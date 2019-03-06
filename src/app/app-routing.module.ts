@@ -12,6 +12,7 @@ import { ProduitPageComponent } from './produit-page/produit-page.component';
 import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
+import { CreateAccountComponent } from './create-account/create-account.component'; 
 
 const routes: Routes = [
   { path: '', component: AccueilComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'modif', component: AdminModifierComponent },
   { path: 'visite', component: VisitorAfficheComponent },
   { path: 'pageprod', component: ProduitPageComponent },
+  { path: 'create-account', component: CreateAccountComponent },
   { path: '**', redirectTo: '' }
 
 ];
@@ -31,4 +33,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: "reload" })],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

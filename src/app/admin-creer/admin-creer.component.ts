@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Game, Genre, Plateform } from 'src/models'
+import { Game, Genre, Plateform } from 'src/models';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({

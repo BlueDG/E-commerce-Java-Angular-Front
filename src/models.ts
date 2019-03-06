@@ -1,7 +1,7 @@
 export interface UserLight {
-    username: string;
-    password: string;
-    credential: Credential;
+    username?: string;
+    password?: string;
+    credential?: Credential;
 }
 
 export enum Credential {
@@ -9,12 +9,12 @@ export enum Credential {
 }
 
 export interface User extends UserLight {
-    email: string;
-    firstname: string;
-    lastname: string;
-    adress: string;
-    phone: string;
-    birthday: Date;
+    email?: string;
+    firstname?: string;
+    lastname?: string;
+    adress?: string;
+    phone?: string;
+    birthday?: Date;
 }
 
 export enum Plateform {
