@@ -24,8 +24,11 @@ export class DataService {
   login(user: UserLight) {
     btoa(user.username + ':' + user.password);
     httpOptions.headers = httpOptions.headers.set('Authorization', 'Basic ' + btoa(user.username + ':' + user.password));
-
     return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
+  }
+
+  createAccount(user: User) {
+    return this._http.post<User>(`${environment.backendUrl}/create-account`, user, httpOptions);
   }
 
   searchGameAdmin(page: string, postGame: PostGame): Observable<GamePaging> {
@@ -56,7 +59,11 @@ export class DataService {
 
   searchGameVisitor(page: string, game: PostGame): Observable<GamePaging> {
     httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game, httpOptions);
+    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game);
+  }
+
+  searchUserByUsername(username : string): Observable<User>{
+    return this._http.post<User>(`${environment.backendUrl}/user`, username, httpOptions);
   }
 
   createOrder(order: Order) {

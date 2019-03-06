@@ -18,11 +18,17 @@ export class MenuComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit() {
-    this.credential = localStorage.getItem("credential")
+    this.credential = localStorage.getItem("credential");
   }
 
   submit() {
     this._router.navigate(['/visite'], { queryParams: { name: this.name } });
+  }
+
+  deco() {
+    localStorage.setItem("credential", "VISITOR");
+    this.credential = localStorage.getItem("credential");
+    localStorage.setItem("username", "");
   }
 }
 
