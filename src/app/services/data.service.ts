@@ -59,7 +59,11 @@ export class DataService {
 
   searchGameVisitor(page: string, game: PostGame): Observable<GamePaging> {
     httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game, httpOptions);
+    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game);
+  }
+
+  searchUserByUsername(username : string): Observable<User>{
+    return this._http.post<User>(`${environment.backendUrl}/user`, username, httpOptions);
   }
 }
 
