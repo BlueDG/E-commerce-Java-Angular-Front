@@ -45,13 +45,18 @@ export class DataService {
     return this._http.put<GamePaging>(`${environment.backendUrl}/game/activation`, game, httpOptions);
   }
 
+  updateGameAdmin(game: Game): Observable<Game> {
+    return this._http.put<Game>(`${environment.backendUrl}/game`, game, httpOptions);
+  }
+
   searchAllGame(page: string): Observable<GamePaging> {
     httpOptions.headers = httpOptions.headers.set('Page', page);
     return this._http.get<GamePaging>(`${environment.backendUrl}/visitor`, httpOptions);
   }
 
-  updateGameAdmin(game: Game): Observable<Game> {
-    return this._http.put<Game>(`${environment.backendUrl}/game`, game, httpOptions);
+  searchGameVisitor(page: string, game: PostGame): Observable<GamePaging> {
+    httpOptions.headers = httpOptions.headers.set('Page', page);
+    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game, httpOptions);
   }
 }
 

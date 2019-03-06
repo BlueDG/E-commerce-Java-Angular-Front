@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class AdminCreerComponent implements OnInit {
 
   game: Game = {};
-  genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.PLATEFORME, Genre.RPG];
+  genre: Genre[] = [Genre.AVENTURE, Genre.FPS, Genre.ARCADE, Genre.RPG];
   plateforme: Plateform[] = [Plateform.GAMEBOY, Plateform.MEGA_DRIVE, Plateform.NES, Plateform.PLAYSTATION, Plateform.SUPER_NINTENDO];
   message: string = '';
   constructor(private _data: DataService) { }

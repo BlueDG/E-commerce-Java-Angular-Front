@@ -17,6 +17,7 @@ import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { AdminAfficheComponent } from './admin-affiche/admin-affiche.component';
 import { AdminCreerComponent } from './admin-creer/admin-creer.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
+import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AdminModifierComponent } from './admin-modifier/admin-modifier.componen
     AdminAfficheComponent,
     AdminCreerComponent,
     AdminModifierComponent,
+    VisitorAfficheComponent,
 
 
   ],

@@ -10,6 +10,11 @@ export enum Credential {
 
 export interface User extends UserLight {
     email: string;
+    firstname: string;
+    lastname: string;
+    adress: string;
+    phone: string;
+    birthday: Date;
 }
 
 export enum Plateform {
@@ -17,7 +22,7 @@ export enum Plateform {
 }
 
 export enum Genre {
-    PLATEFORME = "PLATEFORME", RPG = "RPG", FPS = "FPS", AVENTURE = "AVENTURE"
+    ARCADE = "ARCADE", RPG = "RPG", FPS = "FPS", SPORT = "SPORT", AVENTURE = "AVENTURE"
 }
 
 export interface PostGame {
@@ -25,6 +30,7 @@ export interface PostGame {
     price?: string;
     plateform?: string;
     reference?: string;
+    genre?: string;
 }
 
 export interface GamePaging {
