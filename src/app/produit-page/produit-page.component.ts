@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models';
 import { ActivatedRoute } from '@angular/router';
-import * as moment from 'moment';
+// import * as moment from 'moment';
 
 @Component({
   selector: 'app-produit-page',
@@ -17,7 +17,7 @@ export class ProduitPageComponent implements OnInit {
   ngOnInit() {
     this._route.queryParams.subscribe(params => {
       this.gameToShow = JSON.parse(params.toShow) as Game;
-      this.date = moment(this.gameToShow.date).format('MM/DD/YYYY');
+      // this.date = moment(this.gameToShow.date).format('MM/DD/YYYY');
     })
   }
 
