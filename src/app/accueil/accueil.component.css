@@ -15,8 +15,7 @@
 
 a {
     text-decoration: none;
-    color: whitesmoke;
-    text-shadow: 2px 2px 1px black;
+    color: black;
 }
 
 .borderPerso{
@@ -47,8 +46,10 @@ h3, .h3, .ccaption{
     text-shadow: 5px 5px 10px black;
 }
 
- 
-
+ .carousel-caption a{
+    color: white;
+    text-shadow: 2px 2px 1px black;
+ }
 
 
 /* css des deux rangées avec trois produits */
@@ -87,6 +88,8 @@ h3, .h3, .ccaption{
 }
 
 .products-intro {
+    margin-top: 2%;
+    margin-bottom: 3%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -104,8 +107,11 @@ h3, .h3, .ccaption{
     width: 50%;
 }
 
-/* css des images sur la rangée */
 
+
+/* css de la rangée */
+
+/* css des boutons */
 
 .select-item {
     
@@ -114,9 +120,95 @@ h3, .h3, .ccaption{
     align-items: center;
     justify-content: space-around;
     margin: 0 2% 0 2%;
-    transform: scale(1);
-    transition: all .3s ease-in-out;
+    
 }
+
+/*.select-item a{
+    padding-top: 5%;
+}*/
+
+
+@-webkit-keyframes stripe-slide {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  @keyframes stripe-slide {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .btn {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    -moz-user-select: text;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px 36px 22px;
+    background-color: #fff;
+    color:black;
+    border: 2px solid #666;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    transition: all .5s ease;
+  }
+
+  .btn:-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  .btn--stripe {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .btn--stripe:after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-top: 1px solid #666;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px;
+  }
+
+  .btn--stripe:hover {
+    background-color: #666;
+    color: #fff;
+    border-color: #000;
+  }
+
+  .btn--stripe:hover:after {
+    background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #000;
+    -webkit-animation: stripe-slide 12s infinite linear forwards;
+            animation: stripe-slide 12s infinite linear forwards;
+  }
+
+
+
+
+/* css de la rangée */
 
 .img-container-main {
     display: flex;
@@ -124,17 +216,16 @@ h3, .h3, .ccaption{
     align-items: center;
     width: 60%;
     height: 40%;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+    margin-bottom: 2%;
 }
 
-.select-item:hover {
+.img-container-main:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     transition: all .3s ease-in-out;
-}
-
-.select-item a{
-    padding-top: 5%;
 }
 
 
@@ -150,26 +241,22 @@ h3, .h3, .ccaption{
     margin-left: 5%;
     margin-right: 5%;
     background-color: white;
+    
  }
  
  .console-container {
     display: flex;
-    height: 40rem;
+    height: 30rem;
  }
 
- .console-container img {
-    /*object-fit: cover;
-    width: 100%;
-    height: 100%;*/
-}
+ 
 
  .console-left {
     background-image: url("../../assets/img/last-img-genesis-bis.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
+    background-size: cover;
+    background-position: bottom;
     width: 50%;
-    
 
     display: flex;
     flex-direction: column;
@@ -179,8 +266,8 @@ h3, .h3, .ccaption{
  .console-right {
     background-image: url("../../assets/img/last-img-snesmod.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
+    background-size: cover;
+    background-position: bottom;
     width: 50%;
     
 
@@ -188,57 +275,40 @@ h3, .h3, .ccaption{
     flex-direction: column;
     justify-content: flex-end;
  }
- 
- /*.img-container-last {
-     width: 50%;
-     height: 680px;
- }*/
- 
+
+
+/* css button bas */
+
+
 .console-link {
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 2%;
     
-   
 }
 
- .console-link a {
-     z-index: 1;
-     position: relative;
-     transition: 1s;
- }
+.console-link a {
+   text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  color: white;
+}
+
+.console-link a:hover {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.console-link a:hover {
+  color: #ffffff;
+}
+
  
- .console-link a:before {
-     content: "";
-     background: #000000;
-     border: 1px solid darkgrey;
-     position: absolute;
-     text-align: center;
-     width: 100%;
-     height: 0;
-     bottom: -25%;
-     left: 0;
-     transform: scaleX(0);
-     animation: 1.4s forwards no-hover-v linear;
-     animation-fill-mode: forwards;
-     z-index: -2;
- }
+
  
- .console-link a:hover:before {
-     animation: .5s forwards hover-v linear;
-     animation-fill-mode: forwards;
- }
- 
- .console-link a:hover {
-     color: darkgrey;
- }
- 
- .console-link {
-     margin-right: auto;
-     margin-left: auto;
-     flex-direction: column;
-     text-align: center;
- }
- 
- /*.console-container div:nth-child(2){
-     flex-direction: row-reverse;
- } */
  
 
