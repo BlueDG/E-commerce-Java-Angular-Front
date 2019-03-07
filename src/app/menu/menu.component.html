@@ -59,8 +59,9 @@
                     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i
                             class="fas fa-user"></i></button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                        <button ngbDropdownItem class="btn btn-outline-dark" style="width : 160px;"><app-login></app-login></button>
-                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/create-account" style="width : 160px;">Inscription</button>
+                        <app-login></app-login>
+                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/create-account"
+                            style="width : 160px;">Inscription</button>
                     </div>
                 </div>
             </ng-template>

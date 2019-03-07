@@ -25,6 +25,10 @@ export class DataService {
     return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
   }
 
+  logout() {
+    return this._http.get(`${URL_BACKEND}/logout`, httpOptions);
+  }
+
   createAccount(user: User) {
     return this._http.post<User>(`${environment.backendUrl}/create-account`, user, httpOptions);
   }
