@@ -76,7 +76,9 @@ export class DataService {
   }
 
   findAllOrders(page: number): Observable<OrderPaging> {
-    return this._http.post<OrderPaging>(`${environment.backendUrl}/order/all`, page, httpOptions);
+    let id: number = Number(localStorage.getItem('userId'));
+    httpOptions.headers = httpOptions.headers.set('Page', page.toString());
+    return this._http.post<OrderPaging>(`${environment.backendUrl}/order/all`, id, httpOptions);
   }
 }
 
