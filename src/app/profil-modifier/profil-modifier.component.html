@@ -1,3 +1,4 @@
+<div *ngIf ="credential != 'VISITOR'; else other">
 <form (ngSubmit)="submit()" #monForm="ngForm" autocomplete="off">
   <table>
     <tr>
@@ -52,5 +53,8 @@
         <td><button class="btn btn-outline-dark" type="submit" [disabled]="monForm.invalid">Envoyer</button></td>
     </tr>
   </table>
-  
 </form>
+</div>
+<ng-template #other>
+  <a routerLink="/''" routerLinkActive="active">Vous devez être connecté pour consulter cette page</a>
+</ng-template>

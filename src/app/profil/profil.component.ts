@@ -12,10 +12,12 @@ export class ProfilComponent implements OnInit {
   username: string = "";
   date: string;
   dateToShow: Date;
+  credential : string;
 
   constructor(private _data: DataService) { }
 
   ngOnInit() {
+    this.credential = localStorage.getItem("credential");
     this.username = localStorage.getItem("username");
     this._data.searchUserByUsername(this.username).subscribe(
       value => {

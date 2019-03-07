@@ -17,6 +17,8 @@ export class ProduitPageComponent implements OnInit {
     game: this.gameToShow,
     quantity: 0
   };
+  stock: number;
+  credential : string;
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -26,6 +28,8 @@ export class ProduitPageComponent implements OnInit {
       this.dateToShow = new Date(this.gameToShow.date);
       this.date = `${this.dateToShow.getFullYear()}/${this.dateToShow.getMonth()}/${this.dateToShow.getDay()}`;
     })
+    this.stock = this.gameToShow.stock;
+    this.credential = localStorage.getItem("credential");
   }
 
   addCart() {

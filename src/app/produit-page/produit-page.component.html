@@ -25,7 +25,9 @@
             <label>Quantité</label>
             <input type="number" class="form-control" id="game" name="game" min="1" max="{{gameToShow.stock}}"
                 [(ngModel)]="gameToAdd.quantity">
-            <button type="button" class="btn btn-outline-dark" (click)=addCart()>Ajouter au panier</button>
+
+            <button type="button" class="btn btn-outline-dark" (click)=addCart() [disabled]="stock == 0">Ajouter au
+                panier</button>
         </div>
     </section>
 

@@ -12,9 +12,10 @@ import { ProduitPageComponent } from './produit-page/produit-page.component';
 import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { AdminModifierComponent } from './admin-modifier/admin-modifier.component';
 import { VisitorAfficheComponent } from './visitor-affiche/visitor-affiche.component';
-import { CreateAccountComponent } from './create-account/create-account.component'; 
+import { CreateAccountComponent } from './create-account/create-account.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilModifierComponent } from './profil-modifier/profil-modifier.component';
+import { ListOrderComponent } from './list-order/list-order.component';
 
 
 const routes: Routes = [
@@ -28,8 +29,9 @@ const routes: Routes = [
   { path: 'visite', component: VisitorAfficheComponent },
   { path: 'pageprod', component: ProduitPageComponent },
   { path: 'create-account', component: CreateAccountComponent },
-  { path: 'profil', component: ProfilComponent},
-  { path: 'profil-modif', component: ProfilModifierComponent},
+  { path: 'profil', component: ProfilComponent },
+  { path: 'profil-modif', component: ProfilModifierComponent },
+  { path: 'order-list', component: ListOrderComponent },
   { path: '**', redirectTo: '' }
 
 ];
