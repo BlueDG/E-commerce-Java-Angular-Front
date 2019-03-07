@@ -61,9 +61,9 @@ export interface GameCart {
 
 export interface Order {
     id?: number;
-    games: GameCart[];
-    user: UserLight;
-    orderDate: Date;
+    games?: GameCart[];
+    user?: UserLight;
+    orderDate?: Date;
     totalPrice?: number;
 }
 

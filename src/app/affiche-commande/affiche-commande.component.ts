@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/models';
 import { DataService } from '../services/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-affiche-commande',
@@ -9,12 +10,14 @@ import { DataService } from '../services/data.service';
 })
 export class AfficheCommandeComponent implements OnInit {
 
-  order: Order;
+  order: Order = {};
 
-  constructor(private _data: DataService) { }
+  constructor(private _route: ActivatedRoute) { }
 
   ngOnInit() {
-
+    this._route.queryParams.subscribe(params => {
+      this.order = JSON.parse(params.toEdit) as Order;
+      console.log(this.order);
+    })
   }
-
 }
