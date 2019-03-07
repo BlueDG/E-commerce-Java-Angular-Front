@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/models';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-list-order',
@@ -12,9 +13,28 @@ export class ListOrderComponent implements OnInit {
   orders: Order[];
   totalResult: number;
 
-  constructor() { }
+  constructor(private _serv: DataService) { }
 
   ngOnInit() {
+    this._serv.findAllOrders(1).subscribe(
+      succes => {
+        this.orders = succes.orders;
+        this.totalResult = succes.pages;
+      }, error => {
+        console.log("erreur recuperation data");
+      }
+    )
+  }
+
+  printNewPage() {
+    this._serv.findAllOrders(this.page).subscribe(
+      succes => {
+        this.orders = succes.orders;
+        this.totalResult = succes.pages;
+      }, error => {
+        console.log("erreur recuperation data");
+      }
+    )
   }
 
 }

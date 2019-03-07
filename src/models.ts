@@ -64,4 +64,10 @@ export interface Order {
     games: GameCart[];
     user: UserLight;
     orderDate: Date;
+    totalPrice?: number;
+}
+
+export interface OrderPaging {
+    orders: Order[];
+    pages: number;
 }
