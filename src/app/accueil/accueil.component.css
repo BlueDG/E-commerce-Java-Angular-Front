@@ -67,14 +67,23 @@ h3, .h3, .ccaption{
 
 
 /* retour du css des deux rangées avec trois produits */
-.ensemble-rangee-1 {
+
+
+.background{
     background-image: url("../../assets/img/background-img-body.png");
-    height: 25rem;
     padding-top: 50px;
     padding-bottom: 50px;
-    display: flex;
     background-attachment: fixed;
     text-transform: uppercase;
+}
+
+.ensemble-rangee-1 {
+    height: 25rem;
+    display: flex;
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
 }
 
 .products-intro {
@@ -83,10 +92,8 @@ h3, .h3, .ccaption{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: white;
     height: 350px;
+
 }
 
 .title-top-games {
@@ -101,7 +108,7 @@ h3, .h3, .ccaption{
 
 
 .select-item {
-    /*background-color: green;*/
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,5 +143,102 @@ h3, .h3, .ccaption{
     height: auto;
 }
 
+/*  css de la section console */
 
-/*  */
+
+.section-console {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+ }
+ 
+ .console-container {
+    display: flex;
+    height: 40rem;
+ }
+
+ .console-container img {
+    /*object-fit: cover;
+    width: 100%;
+    height: 100%;*/
+}
+
+ .console-left {
+    background-image: url("../../assets/img/last-img-genesis-bis.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 50%;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+ }
+
+ .console-right {
+    background-image: url("../../assets/img/last-img-snesmod.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 50%;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+ }
+ 
+ /*.img-container-last {
+     width: 50%;
+     height: 680px;
+ }*/
+ 
+.console-link {
+    
+   
+}
+
+ .console-link a {
+     z-index: 1;
+     position: relative;
+     transition: 1s;
+ }
+ 
+ .console-link a:before {
+     content: "";
+     background: #000000;
+     border: 1px solid darkgrey;
+     position: absolute;
+     text-align: center;
+     width: 100%;
+     height: 0;
+     bottom: -25%;
+     left: 0;
+     transform: scaleX(0);
+     animation: 1.4s forwards no-hover-v linear;
+     animation-fill-mode: forwards;
+     z-index: -2;
+ }
+ 
+ .console-link a:hover:before {
+     animation: .5s forwards hover-v linear;
+     animation-fill-mode: forwards;
+ }
+ 
+ .console-link a:hover {
+     color: darkgrey;
+ }
+ 
+ .console-link {
+     margin-right: auto;
+     margin-left: auto;
+     flex-direction: column;
+     text-align: center;
+ }
+ 
+ /*.console-container div:nth-child(2){
+     flex-direction: row-reverse;
+ } */
+ 
+
