@@ -33,6 +33,7 @@ export class MenuComponent implements OnInit {
       localStorage.setItem("credential", "VISITOR");
       this.credential = localStorage.getItem("credential");
       localStorage.setItem("username", "");
+      this._router.navigateByUrl('');
     }, error => {
 
     }
