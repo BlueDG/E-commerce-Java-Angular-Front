@@ -4,6 +4,7 @@
       <th scope="col">ID</th>
       <th scope="col">Date commande</th>
       <th scope="col">Prix total</th>
+      <th scope="col">Consulter</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -17,7 +18,9 @@
 
       <td>{{obj.totalPrice}}</td>
 
-      <td><button class="btn btn-secondary" routerLink="/modif" [queryParams]="{toEdit: obj | json}">Edit</button></td>
+      <td><button class="btn btn-secondary" routerLink="/affiche-order" [queryParams]="{toEdit: obj | json}">Consulter</button></td>
+
+      <td><button class="btn btn-secondary" routerLink="/''" [queryParams]="{toEdit: obj | json}">Edit</button></td>
 
       <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
     </tr>

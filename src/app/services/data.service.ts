@@ -92,6 +92,10 @@ export class DataService {
     httpOptions.headers = httpOptions.headers.set('Page', page.toString());
     return this._http.post<OrderPaging>(`${environment.backendUrl}/order/all`, id, httpOptions);
   }
+
+  findOrderById(): Observable<Order>{
+    return null;
+  }
 }
 
 
