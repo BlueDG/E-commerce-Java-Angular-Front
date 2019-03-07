@@ -1,3 +1,28 @@
-<p>
-  list-order works!
-</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Date commande</th>
+      <th scope="col">Prix total</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor='let obj of orders'>
+      <td>{{obj.id}}</td>
+
+      <td>{{obj.orderDate}}</td>
+
+      <td>{{obj.totalPrice}}</td>
+
+      <td><button class="btn btn-secondary" routerLink="/modif" [queryParams]="{toEdit: obj | json}">Edit</button></td>
+
+      <td><button class="btn btn-danger" (click)="delete(obj)">Delete</button></td>
+    </tr>
+
+  </tbody>
+</table>
+<ngb-pagination class="d-flex justify-content-center" [collectionSize]='totalResult' [(page)]="page"
+  aria-label="Default pagination" (pageChange)="printNewPage()"></ngb-pagination>

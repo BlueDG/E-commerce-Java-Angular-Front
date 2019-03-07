@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order } from 'src/models';
+import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order, OrderPaging } from 'src/models';
 import { Observable, of } from 'rxjs';
 
 
@@ -62,17 +62,21 @@ export class DataService {
     return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game);
   }
 
-  searchUserByUsername(username : string): Observable<User>{
+  searchUserByUsername(username: string): Observable<User> {
     return this._http.post<User>(`${environment.backendUrl}/user`, username, httpOptions);
   }
 
-  updateProfil(user : User): Observable<User>{
+  updateProfil(user: User): Observable<User> {
     return this._http.put<User>(`${environment.backendUrl}/user`, user, httpOptions);
   }
-  
+
   createOrder(order: Order) {
     console.log(order)
     return this._http.post<GameCart[]>(`${environment.backendUrl}/order`, order, httpOptions);
+  }
+
+  findAllOrders(page: number): Observable<OrderPaging> {
+    return this._http.post<OrderPaging>(`${environment.backendUrl}/order/all`, page, httpOptions);
   }
 }
 
