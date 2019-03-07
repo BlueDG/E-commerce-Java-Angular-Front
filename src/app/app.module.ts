@@ -23,6 +23,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProfilModifierComponent } from './profil-modifier/profil-modifier.component';
 import { ListOrderComponent } from './list-order/list-order.component';
+import { AfficheCommandeComponent } from './affiche-commande/affiche-commande.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ListOrderComponent } from './list-order/list-order.component';
     ProfilComponent,
     ProfilModifierComponent,
     ListOrderComponent,
+    AfficheCommandeComponent,
 
 
   ],

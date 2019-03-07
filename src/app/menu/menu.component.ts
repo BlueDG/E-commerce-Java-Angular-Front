@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Credential } from 'src/models';
 import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +16,7 @@ export class MenuComponent implements OnInit {
   genre: string[] = ['AVENTURE', 'FPS', 'ARCADE', 'RPG', 'SPORT'];
   plateforme: string[] = ['GAMEBOY', 'MEGA_DRIVE', 'NES', 'PLAYSTATION', 'SUPER_NINTENDO'];
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _serv: DataService) { }
 
   ngOnInit() {
     this.credential = localStorage.getItem("credential");
@@ -26,10 +27,17 @@ export class MenuComponent implements OnInit {
   }
 
   deco() {
-    localStorage.setItem("credential", "VISITOR");
-    this.credential = localStorage.getItem("credential");
-    localStorage.setItem("username", "");
-    window.location.reload();
+
+    this._serv.logout().subscribe(succes => {
+
+      localStorage.setItem("credential", "VISITOR");
+      this.credential = localStorage.getItem("credential");
+      localStorage.setItem("username", "");
+    }, error => {
+
+    }
+    );
+    //window.location.reload();
   }
 }
 
