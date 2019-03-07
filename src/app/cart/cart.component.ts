@@ -4,6 +4,7 @@ import { Order, GameCart, Credential } from 'src/models';
 import { DataService } from '../services/data.service';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -20,7 +21,7 @@ export class CartComponent implements OnInit {
   failMessage: string;
   order: Order;
 
-  constructor(private _serv: DataService, private modalService: NgbModal) { }
+  constructor(private router: Router, private _serv: DataService, private modalService: NgbModal) { }
 
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true, size: 'lg' });
@@ -35,9 +36,11 @@ export class CartComponent implements OnInit {
     this.purchaseList = JSON.parse(localStorage.getItem("purchaseList")) as GameCart[];
     this._success.subscribe((message) => this.successMessage = message);
     this._success.pipe(
-      debounceTime(5000)
+      debounceTime(2000)
     ).subscribe(() => {
       this.successMessage = null;
+      this.modalService.dismissAll();
+      this.router.navigateByUrl("/order-list")
     });
     this._fail.subscribe((message) => this.failMessage = message);
     this._fail.pipe(
@@ -67,12 +70,14 @@ export class CartComponent implements OnInit {
         username: localStorage.getItem("username"),
         credential: localStorage.getItem("credential") as Credential
       },
-      orderDate: new Date()
+      orderDate: new Date(),
+      totalPrice: this.total
     }).subscribe(
       succes => {
         this.purchaseList = [];
         this.total = 0;
         localStorage.setItem("purchaseList", JSON.stringify(this.purchaseList));
+        this.changeSuccessMessage();
       }, error => {
         this.changeFailMessage();
         console.log(`Erreur login : ${error}`)
