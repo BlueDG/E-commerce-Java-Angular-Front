@@ -4,8 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order, OrderPaging } from 'src/models';
 import { Observable, of } from 'rxjs';
 
-
-
 const URL_BACKEND = environment.backendUrl;
 const httpOptions = {
   headers: new HttpHeaders({
@@ -71,7 +69,6 @@ export class DataService {
   }
 
   createOrder(order: Order) {
-    console.log(order)
     return this._http.post<GameCart[]>(`${environment.backendUrl}/order`, order, httpOptions);
   }
 
