@@ -1,6 +1,6 @@
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Connection</h4>
+    <h4 class="modal-title" id="modal-basic-title">Connexion</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -35,5 +35,4 @@
   </div>
 </ng-template>
 
-
-<button class="btn btn-lg navbar-brand" (click)="openVerticallyCentered(content)"><i class="fas fa-user"></i></button>
+<button class="btn btn-outline-dark" (click)="openVerticallyCentered(content)">Connexion</button>
