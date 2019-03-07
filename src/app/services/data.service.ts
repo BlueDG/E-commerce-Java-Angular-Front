@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order, OrderPaging } from 'src/models';
 import { Observable, of } from 'rxjs';
 
@@ -42,8 +42,12 @@ export class DataService {
   }
 
   searchGameAdmin(page: string, postGame: PostGame): Observable<GamePaging> {
-    httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.post<GamePaging>(`${environment.backendUrl}/game/search`, postGame, httpOptions);
+    let httpOptionsSearch = {
+      headers: httpOptions.headers.append('page', page),
+      withCredentials: true
+    };
+
+    return this._http.post<GamePaging>(`${environment.backendUrl}/game/search`, postGame, httpOptionsSearch);
   }
 
   createGameAdmin(game: Game): Observable<Game> {
@@ -63,13 +67,21 @@ export class DataService {
   }
 
   searchAllGame(page: string): Observable<GamePaging> {
-    httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.get<GamePaging>(`${environment.backendUrl}/visitor`, httpOptions);
+    let httpOptionsSearch = {
+      headers: httpOptions.headers.append('page', page),
+      withCredentials: true
+    };
+
+    return this._http.get<GamePaging>(`${environment.backendUrl}/visitor`, httpOptionsSearch);
   }
 
   searchGameVisitor(page: string, game: PostGame): Observable<GamePaging> {
-    httpOptions.headers = httpOptions.headers.set('Page', page);
-    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game);
+    let httpOptionsSearch = {
+      headers: httpOptions.headers.append('page', page),
+      withCredentials: true
+    };
+
+    return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game, httpOptionsSearch);
   }
 
   searchUserByUsername(username: string): Observable<User> {
@@ -86,11 +98,11 @@ export class DataService {
 
   findAllOrders(page: number): Observable<OrderPaging> {
     let id: number = Number(localStorage.getItem('userId'));
-    httpOptions.headers = httpOptions.headers.set('Page', page.toString());
+    httpOptions.headers = httpOptions.headers.set('page', page.toString());
     return this._http.post<OrderPaging>(`${environment.backendUrl}/order/all`, id, httpOptions);
   }
 
-  findOrderById(): Observable<Order>{
+  findOrderById(): Observable<Order> {
     return null;
   }
 }
