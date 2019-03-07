@@ -3,10 +3,16 @@
     <div class="header-top">
         <!-- Première ligne du header -->
 
-        <nav class="navbar navbar-expand-sm">
+        <nav class="big-title navbar navbar-expand-sm ">
             <!-- lien vers page accueil -->
-            <a class="navbar-brand big-title" routerLink="#">RETROGAMING</a>
-
+            <audio id="audio" src="../../assets/sound/menu.wav" autoplay="false" ></audio>
+            <a class="navbar-brand big-title-link" routerLink="#" onclick="playSound();">RETROGAMING</a>
+            <script>
+                function playSound() {
+                    var sound = document.getElementById("audio");
+                    sound.play();
+                }
+            </script>
         </nav>
 
         <nav class="header-top-center navbar navbar-expand-sm">
