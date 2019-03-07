@@ -29,6 +29,7 @@ export class MenuComponent implements OnInit {
     localStorage.setItem("credential", "VISITOR");
     this.credential = localStorage.getItem("credential");
     localStorage.setItem("username", "");
+    window.location.reload();
   }
 }
 

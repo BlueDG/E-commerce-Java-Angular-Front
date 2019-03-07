@@ -1,4 +1,4 @@
-<div *ngIf ="credential != 'VISITOR'">
+<div *ngIf ="credential != 'VISITOR'; else other">
   <table>
     <tr>
       <th colspan="2">PROFIL</th>
@@ -34,3 +34,6 @@
   </table>
   <button class="btn btn-outline-dark" routerLink="/profil-modif" [queryParams]="{obj: user | json}">Modifier</button>
 </div>
+<ng-template #other>
+  <a routerLink="/''" routerLinkActive="active">Vous devez être connecté pour consulter cette page</a>
+</ng-template>

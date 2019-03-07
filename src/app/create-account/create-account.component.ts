@@ -11,11 +11,13 @@ export class CreateAccountComponent implements OnInit {
 
   user: User = {};
   message: string = '';
+  credential : string;
   constructor(private _data: DataService) {
 
   }
 
   ngOnInit() {
+    this.credential = localStorage.getItem("credential");
   }
 
   submit() {

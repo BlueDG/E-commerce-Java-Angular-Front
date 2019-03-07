@@ -10,14 +10,16 @@ import { DataService } from '../services/data.service';
 })
 export class ProfilModifierComponent implements OnInit {
   user: User;
-  message : string = "";
+  message: string = "";
+  credential: string;
 
   constructor(private _route: ActivatedRoute, private _data: DataService) { }
 
   ngOnInit() {
+    this.credential = localStorage.getItem("credential");
     this._route.queryParams.subscribe(params => {
       this.user = JSON.parse(params.obj) as User;
-      
+
       this.user.birthday = new Date(this.user.birthday);
       console.log(this.user);
     })
