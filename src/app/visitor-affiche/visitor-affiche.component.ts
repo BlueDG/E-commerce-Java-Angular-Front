@@ -16,6 +16,7 @@ export class VisitorAfficheComponent implements OnInit {
   @Input() name: string;
 
   games: Game[];
+  postGame: PostGame;
   page: number;
   totalResult: number;
 
@@ -32,7 +33,14 @@ export class VisitorAfficheComponent implements OnInit {
       plateform: this.plateform,
       genre: this.genre
     }
-    this._data.searchGameVisitor('1', game).subscribe(
+
+    this.page = 1;
+    this.postGame = game;
+    this.printNewPage();
+  }
+
+  printNewPage() {
+    this._data.searchGameVisitor(this.page.toString(), this.postGame).subscribe(
       value => {
         if (value.games.length == 0) {
           this.changeFailMessage('aucun resultat');
@@ -41,16 +49,6 @@ export class VisitorAfficheComponent implements OnInit {
         this.totalResult = value.pages;
       },
       error => { this.changeFailMessage("Erreur lors de l'enregistrement."); }
-    );
-  }
-
-  printNewPage() {
-    this._data.searchAllGame(this.page.toString()).subscribe(
-      value => {
-
-        this.games = value.games;
-      },
-      error => { }
     );
   }
 
