@@ -11,6 +11,17 @@
 	background-position: center;
 }
 
+.big-title-link {
+	font-family: 'Mario-Kart-DS';
+  color: black;
+  
+}
+
+.big-title a:active {
+  color: yellow;
+  
+}
+
 .header-top {
     background-repeat: no-repeat;
   	background-size: auto;
@@ -44,6 +55,7 @@ input[type=search] {
 	font-family: inherit;
 	font-size: 100%;
 }
+
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
 	display: none; 
@@ -112,10 +124,6 @@ a {
   }
 
 
-.big-title {
-	font-family: 'Mario-Kart-DS';
-	color: black;
-}
 
 /* css barre 2 effect */ 
 
