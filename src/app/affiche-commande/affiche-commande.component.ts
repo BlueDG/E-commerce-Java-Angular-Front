@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from 'src/models';
+import { Order, Game, GameCart } from 'src/models';
 import { DataService } from '../services/data.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AfficheCommandeComponent implements OnInit {
 
   order: Order = {};
+  games : GameCart[] = [];
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -18,6 +19,7 @@ export class AfficheCommandeComponent implements OnInit {
     this._route.queryParams.subscribe(params => {
       this.order = JSON.parse(params.toEdit) as Order;
       console.log(this.order);
+      this.games = this.order.games;
     })
   }
 }
