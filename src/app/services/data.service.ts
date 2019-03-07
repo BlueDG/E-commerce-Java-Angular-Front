@@ -22,13 +22,21 @@ export class DataService {
   constructor(private _http: HttpClient) { }
 
   login(user: UserLight) {
-    btoa(user.username + ':' + user.password);
-    httpOptions.headers = httpOptions.headers.set('Authorization', 'Basic ' + btoa(user.username + ':' + user.password));
-    return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptions);
+    let basicAuth: string = btoa(user.username + ':' + user.password);
+
+    const httpOptionsWithBasicAuth = {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json",
+        "Authorization": 'Basic ' + basicAuth
+      }),
+      withCredentials: true
+    };
+
+    return this._http.get<UserLight>(`${URL_BACKEND}/user`, httpOptionsWithBasicAuth);
   }
 
   logout() {
-    return this._http.get(`${URL_BACKEND}/logout`, httpOptions);
+    return this._http.get(`${URL_BACKEND}/user/logout`, httpOptions);
   }
 
   createAccount(user: User) {
