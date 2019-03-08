@@ -71,3 +71,11 @@ export interface OrderPaging {
     orders: Order[];
     pages: number;
 }
+
+export interface PostOrder {
+    firstname?: string;
+    lastname?: string;
+    orderNum?: number;
+    startDate?: Date;
+    endDate?: Date;
+}

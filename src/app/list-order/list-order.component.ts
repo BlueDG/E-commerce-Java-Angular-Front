@@ -11,19 +11,13 @@ export class ListOrderComponent implements OnInit {
 
   page: number;
   orders: Order[];
+  dates: string[] = [];
+  tempDate: Date;
   totalResult: number;
 
   constructor(private _serv: DataService) { }
 
   ngOnInit() {
-    // this._serv.findAllOrders('1').subscribe(
-    //   succes => {
-    //     this.orders = succes.orders;
-    //     this.totalResult = succes.pages;
-    //   }, error => {
-    //     console.log("erreur recuperation data");
-    //   }
-    // )
     this.page = 1;
     this.printNewPage();
   }
@@ -33,6 +27,10 @@ export class ListOrderComponent implements OnInit {
       succes => {
         this.orders = succes.orders;
         this.totalResult = succes.pages;
+        this.orders.forEach(value => {
+          this.tempDate = new Date(value.orderDate);
+          this.dates.push(`${this.tempDate.getFullYear()}/${this.tempDate.getMonth()}/${this.tempDate.getDay()}`)
+        })
       }, error => {
         console.log("erreur recuperation data");
       }
