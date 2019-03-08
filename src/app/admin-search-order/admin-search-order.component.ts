@@ -18,7 +18,7 @@ export class AdminSearchOrderComponent implements OnInit {
   private _fail = new Subject<string>();
   failMessage: string;
 
-  constructor(private _data: DataService) { }
+  constructor(private _serv: DataService) { }
 
   ngOnInit() {
     this.orderPaging = {
@@ -33,7 +33,7 @@ export class AdminSearchOrderComponent implements OnInit {
 
 
   submit() {
-    this._data.findOrdersAdmin(this.pages.toString(), this.postOrder).subscribe(
+    this._serv.findOrdersAdmin(this.pages.toString(), this.postOrder).subscribe(
       value => {
         if (value.orders.length == 0) {
           this.changeFailMessage('aucun resultat');

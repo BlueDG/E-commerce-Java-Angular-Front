@@ -16,11 +16,29 @@
       </tr>
       <tr>
         <td><label>startDate</label></td>
-        <td><input class="form-control" [(ngModel)]="postOrder.startDate" name="val4"></td>
+        <td>
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="postOrder.startDate" ngbDatepicker
+              #d="ngbDatepicker" [minDate]="{ year: 1910, month: 1, day: 1}" name="startDate" required>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d.toggle()"
+                type="button"></button>
+            </div>
+          </div>
+        </td>
       </tr>
       <tr>
         <td><label>endDate</label></td>
-        <td><input class="form-control" [(ngModel)]="postOrder.endDate" name="val5"></td>
+        <td>
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="postOrder.endDate" ngbDatepicker
+              #e="ngbDatepicker" [minDate]="{ year: 1910, month: 1, day: 1}" name="endDate" required>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="e.toggle()"
+                type="button"></button>
+            </div>
+          </div>
+        </td>
       </tr>
     </table>
     <button class="btn btn-outline-dark" type="submit">Envoyer</button>
