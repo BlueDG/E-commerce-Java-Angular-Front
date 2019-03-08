@@ -19,6 +19,7 @@ import { ListOrderComponent } from './list-order/list-order.component';
 import { AfficheCommandeComponent } from './affiche-commande/affiche-commande.component';
 import { AdminListOrderComponent } from './admin-list-order/admin-list-order.component';
 import { AdminSearchOrderComponent } from './admin-search-order/admin-search-order.component';
+import { AdminAfficheOrderComponent } from './admin-affiche-order/admin-affiche-order.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'order-list', component: ListOrderComponent },
   { path: 'admin-search-order', component: AdminSearchOrderComponent },
   { path: 'affiche-order', component: AfficheCommandeComponent },
+  { path: 'admin-affiche-order', component: AdminAfficheOrderComponent},
   { path: '**', redirectTo: '' }
 
 ];

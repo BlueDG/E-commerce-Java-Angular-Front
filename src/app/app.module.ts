@@ -26,6 +26,7 @@ import { ListOrderComponent } from './list-order/list-order.component';
 import { AfficheCommandeComponent } from './affiche-commande/affiche-commande.component';
 import { AdminListOrderComponent } from './admin-list-order/admin-list-order.component';
 import { AdminSearchOrderComponent } from './admin-search-order/admin-search-order.component';
+import { AdminAfficheOrderComponent } from './admin-affiche-order/admin-affiche-order.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AdminSearchOrderComponent } from './admin-search-order/admin-search-ord
     AfficheCommandeComponent,
     AdminListOrderComponent,
     AdminSearchOrderComponent,
+    AdminAfficheOrderComponent,
 
 
   ],
