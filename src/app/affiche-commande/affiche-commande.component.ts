@@ -11,14 +11,18 @@ import { ActivatedRoute } from '@angular/router';
 export class AfficheCommandeComponent implements OnInit {
 
   order: Order = {};
-  games: GameCart[] = [];
+  gameCart: GameCart[] = [];
+  date: string;
+  date1: Date;
 
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit() {
     this._route.queryParams.subscribe(params => {
       this.order = JSON.parse(params.toEdit) as Order;
-      this.games = this.order.games;
+      this.gameCart = this.order.games;
+      this.date1 = new Date(this.order.orderDate);
+      this.date = `${this.date1.getFullYear()}/${this.date1.getMonth()}/${this.date1.getDay()}`;
     })
   }
 }
