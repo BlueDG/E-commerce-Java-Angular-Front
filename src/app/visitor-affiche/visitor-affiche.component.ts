@@ -55,4 +55,8 @@ export class VisitorAfficheComponent implements OnInit {
   public changeFailMessage(msg: string) {
     this._fail.next(msg);
   }
+
+  newSearch() {
+    window.location.reload();
+  }
 }
