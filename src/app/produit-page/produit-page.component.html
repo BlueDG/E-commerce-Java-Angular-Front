@@ -2,7 +2,7 @@
     <section class="row section-product-line1">
         <div class="col-6 product-img">
             <div class="img-container">
-                <div><img src={{gameToShow.image}}></div>
+                <div><img src={{gameToShow.image}} height="300" width="auto"></div>
             </div>
         </div>
         <div class="col-6 product-info">
@@ -24,10 +24,13 @@
             <p>STOCK : {{gameToShow.stock}} PRIX : {{gameToShow.price}}€</p>
             <label>Quantité</label>
             <input type="number" class="form-control" id="game" name="game" min="1" max="{{gameToShow.stock}}"
-                [(ngModel)]="gameToAdd.quantity">
+                [(ngModel)]="gameToAdd.quantity" style="width: 10em;">
 
             <button type="button" class="btn btn-outline-dark" (click)=addCart() [disabled]="stock == 0">Ajouter au
                 panier</button>
+            <div *ngIf="stock==0">
+                Ce jeu n'est pas disponible pour le moment.
+            </div>
         </div>
     </section>
 

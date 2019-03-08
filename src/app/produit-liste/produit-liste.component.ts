@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Game, PostGame } from 'src/models';
-import { AdminRechercheComponent } from '../admin-recherche/admin-recherche.component';
+import { Game } from 'src/models';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -25,7 +24,6 @@ export class ProduitListeComponent implements OnInit {
         }
         this.games = value.games;
         this.totalResult = value.pages;
-        console.log(this.totalResult);
       },
       error => { console.log("Erreur lors de l'enregistrement."); }
     );

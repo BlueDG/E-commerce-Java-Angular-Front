@@ -98,7 +98,6 @@ export class DataService {
 
   findAllOrders(page: string): Observable<OrderPaging> {
     let id: number = Number(localStorage.getItem('userId'));
-    //httpOptions.headers = httpOptions.headers.set('page', page.toString());
     let httpOptionsSearch = {
       headers: httpOptions.headers.append('page', page),
       withCredentials: true

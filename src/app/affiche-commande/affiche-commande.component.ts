@@ -12,6 +12,8 @@ export class AfficheCommandeComponent implements OnInit {
 
   order: Order = {};
   gameCart: GameCart[] = [];
+  date: string;
+  date1: Date;
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -19,6 +21,8 @@ export class AfficheCommandeComponent implements OnInit {
     this._route.queryParams.subscribe(params => {
       this.order = JSON.parse(params.toEdit) as Order;
       this.gameCart = this.order.games;
+      this.date1 = new Date(this.order.orderDate);
+      this.date = `${this.date1.getFullYear()}/${this.date1.getMonth()}/${this.date1.getDay()}`;
     })
   }
 }

@@ -19,7 +19,7 @@
 
       <td>{{obj.plateform}}</td>
 
-      <td><button class="btn btn-secondary" (click)="afficherDetails(obj)">Détails</button></td>
+      <td><button class="btn btn-secondary" routerLink="/pageprod" [queryParams]="{toShow: obj | json}">Détails</button></td>
 
   </tbody>
 </table>
