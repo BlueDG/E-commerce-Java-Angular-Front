@@ -16,23 +16,23 @@
 
                 <li class="nav-item">
                     <a class="navbar-brand link-1" routerLink="/visite" [queryParams]="{plateform: plateforme[1]}"
-                        (click)="window.location.reload()">Mega Drive</a>
+                        (click)="reload()">Mega Drive</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand link-1" routerLink="/visite" [queryParams]="{plateform: plateforme[3]}"
-                        (click)="window.location.reload()">PSX</a>
+                        (click)="reload()">PSX</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand link-1" routerLink="/visite" [queryParams]="{plateform: plateforme[4]}"
-                        (click)="window.location.reload()">SNES</a>
+                        (click)="reload()">SNES</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand link-1" routerLink="/visite" [queryParams]="{plateform: plateforme[2]}"
-                        (click)="window.location.reload()">NES</a>
+                        (click)="reload()">NES</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-brand link-1" routerLink="/visite" [queryParams]="{plateform: plateforme[0]}"
-                        (click)="window.location.reload()">Game Boy</a>
+                        (click)="reload()">Game Boy</a>
                 </li>
             </ul>
         </nav>
@@ -45,10 +45,13 @@
             <div *ngIf="credential=='ADMIN' || credential == 'REGISTER'; else notLogged">
                 <!--LOGGED-->
                 <div ngbDropdown>
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-user"></i></button>
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i
+                            class="fas fa-user"></i></button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/profil" style="width : 160px;">Profil</button>
-                        <button ngbDropdownItem class="btn btn-outline-dark" (click)="deco()" style="width : 160px;">Deconnexion</button>
+                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/profil"
+                            style="width : 160px;">Profil</button>
+                        <button ngbDropdownItem class="btn btn-outline-dark" (click)="deco()"
+                            style="width : 160px;">Deconnexion</button>
                     </div>
                 </div>
             </div>
@@ -89,23 +92,23 @@
             <ul class="navbar-nav">
                 <li class="nav-item2">
                     <a class="nav-link" routerLink="/visite" [queryParams]="{genre: genre[2]}"
-                        (click)="window.location.reload()">ARCADE</a>
+                        (click)="reload()">ARCADE</a>
                 </li>
                 <li class="nav-item2">
                     <a class="nav-link" routerLink="/visite" [queryParams]="{genre: genre[3]}"
-                        (click)="window.location.reload()">RPG</a>
+                        (click)="reload()">RPG</a>
                 </li>
                 <li class="nav-item2">
                     <a class="nav-link" routerLink="/visite" [queryParams]="{genre: genre[1]}"
-                        (click)="window.location.reload()">FPS</a>
+                        (click)="reload()">FPS</a>
                 </li>
                 <li class="nav-item2">
                     <a class="nav-link" routerLink="/visite" [queryParams]="{genre: genre[4]}"
-                        (click)="window.location.reload()">SPORT</a>
+                        (click)="reload()">SPORT</a>
                 </li>
                 <li class="nav-item2">
                     <a class="nav-link" routerLink="/visite" [queryParams]="{genre: genre[0]}"
-                        (click)="window.location.reload()">ADVENTURE</a>
+                        (click)="reload()">ADVENTURE</a>
                 </li>
             </ul>
 
