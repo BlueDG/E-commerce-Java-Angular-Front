@@ -26,6 +26,7 @@ export class CartComponent implements OnInit {
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true, size: 'lg' });
     this.purchaseList = JSON.parse(localStorage.getItem("purchaseList")) as GameCart[];
+    this.total = 0;
     this.purchaseList.forEach(value => {
       this.total = this.total + value.game.price * value.quantity;
     })
@@ -55,7 +56,7 @@ export class CartComponent implements OnInit {
       this.purchaseList.splice(i, 1)
       this.total = 0;
       this.purchaseList.forEach(value => {
-        this.total = this.total + value.game.price * value.quantity;
+        this.total = this.total + (value.game.price * value.quantity);
       })
     } else { console.log(i) }
     localStorage.setItem("purchaseList", JSON.stringify(this.purchaseList));
