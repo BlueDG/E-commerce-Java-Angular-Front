@@ -73,9 +73,9 @@ export interface OrderPaging {
 }
 
 export interface PostOrder {
-    firstname: string;
-    lastname: string;
-    orderNum: number;
-    startDate: Date;
-    endDate: Date;
+    firstname?: string;
+    lastname?: string;
+    orderNum?: number;
+    startDate?: Date;
+    endDate?: Date;
 }
