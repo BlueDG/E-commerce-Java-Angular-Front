@@ -11,14 +11,13 @@ import { ActivatedRoute } from '@angular/router';
 export class AfficheCommandeComponent implements OnInit {
 
   order: Order = {};
-  games : GameCart[] = [];
+  games: GameCart[] = [];
 
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit() {
     this._route.queryParams.subscribe(params => {
       this.order = JSON.parse(params.toEdit) as Order;
-      console.log(this.order);
       this.games = this.order.games;
     })
   }
