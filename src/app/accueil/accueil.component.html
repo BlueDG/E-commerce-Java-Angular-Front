@@ -3,19 +3,19 @@
     <ng-template ngbSlide class="img-carousel-container">
       <img class=".img-fluid img-carousel" src="../../assets/img/slider-snes.jpg" alt="first slide">
       <div class="carousel-caption ccaption">
-          <a routerLink="#"><h3>SUPER NINTENDO</h3></a>
+          <a routerLink="/visite" [queryParams]="{plateform: plateforme[4]}" (click)="window.location.reload()"><h3>SUPER NINTENDO</h3></a>
       </div>
     </ng-template>
     <ng-template ngbSlide class="img-carousel-container">
       <img class=".img-fluid img-carousel" src="../../assets/img/slider-genesis-bis.jpg" alt="second slide">
       <div class="carousel-caption ccaption">
-          <a routerLink="#"><h3>MEGA DRIVE</h3></a>
+          <a routerLink="/visite" [queryParams]="{plateform: plateforme[1]}" (click)="window.location.reload()"><h3>MEGA DRIVE</h3></a>
       </div>
     </ng-template>
     <ng-template ngbSlide class="img-carousel-container">
       <img class=".img-fluid img-carousel" src="../../assets/img/slider-all-games.jpg"  alt="third slide">
       <div class="carousel-caption ccaption">
-        <a routerLink="#"><h3>Tous nos jeux</h3></a>
+        <a routerLink="produitListe"><h3>Tous nos jeux</h3></a>
       </div>
     </ng-template>
   </ngb-carousel>
@@ -28,26 +28,26 @@
 
             <div class="title-top-games">
                 <h2>Top Arcade</h2>
-                <a routerLink="#" class="retro-button">Explorer</a>
+                <a routerLink="/visite" [queryParams]="{genre: genre[2]}" (click)="window.location.reload()" class="retro-button">Explorer</a>
             </div>
 
             <article class="select-item">
               <div class="img-container-main">
-                  <a routerLink="#"><img src="../../assets/img/top-games-1.jpg" alt="nutrition"></a>  
+                  <a routerLink="#"><img src="http://www.thecoverproject.net/images/covers/ps1_tekken3_front_eu_thumb.jpg" alt="nutrition"></a>  
               </div>
               <a routerLink="#"><h4 class="btn btn--stripe">Explorer</h4></a>
             </article>
 
             <article class="select-item">
               <div class="img-container-main">
-                  <a routerLink="#"><img src="../../assets/img/top-games-1.jpg" alt="nutrition"></a>  
+                  <a routerLink="#"><img src="http://www.thecoverproject.net/images/covers/snes_supermarioworld_eu_2_thumb.jpg" alt="nutrition"></a>  
               </div>
               <a routerLink="#"><h4 class="btn btn--stripe">Explorer</h4></a>
             </article>
 
             <article class="select-item">
               <div class="img-container-main">
-                  <a routerLink="#"><img src="../../assets/img/top-games-1.jpg" alt="nutrition"></a>  
+                  <a routerLink="#"><img src="http://www.thecoverproject.net/images/covers/genesis_revengeofshinobi_thumb.jpg" alt="nutrition"></a>  
               </div>
               <a routerLink="#"><h4 class="btn btn--stripe">Explorer</h4></a>
             </article>
@@ -60,28 +60,28 @@
 
           <article class="select-item">
             <div class="img-container-main">
-                <a routerLink="#"><img src="../../assets/img/top-games-1.jpg" alt=""></a>  
+                <a routerLink="#"><img src="http://www.thecoverproject.net/images/covers/gb_pokemonyellow_5_thumb.jpg" alt=""></a>  
             </div>
             <a routerLink="#"><h4 class="btn btn--stripe">Explorer</h4></a>
           </article>
 
           <article class="select-item">
             <div class="img-container-main">
-                <a routerLink="#"><img src="../../assets/img/top-games-1.jpg" alt=""></a>  
+                <a routerLink="#"><img src="https://i.ebayimg.com/12/!!d-zeJ!!WM~$(KGrHqEOKjMEzJjNSMU!BM7DkR!eRg~~_35.JPG?set_id=89040003C1" alt=""></a>  
             </div>
             <a routerLink="#"><h4 class="btn btn--stripe">Explorer</h4></a>
           </article>
 
           <article class="select-item">
             <div class="img-container-main">
-                <a routerLink="#"><img src="../../assets/img/top-games-1.jpg" alt=""></a>  
+                <a routerLink="#"><img src="http://www.thecoverproject.net/images/covers/ps1_finalfantasy7_front_eu_thumb.jpg" alt=""></a>  
             </div>
             <a routerLink="#"><h4 class="btn btn--stripe">Explorer</h4></a>
           </article>
 
           <div class="title-top-games">
             <h2>TOP RPG</h2>
-            <a routerLink="#">Explorer</a>
+            <a routerLink="/visite" [queryParams]="{genre: genre[3]}" (click)="window.location.reload()">Explorer</a>
           </div>
       </article>
   </section>
@@ -91,13 +91,15 @@
     <div class="console-container">
       <div class="console-left">
         <div class="console-link">
-          <a routerLink="#">Explorer</a>
+          <a routerLink="/visite" [queryParams]="{plateform: plateforme[1]}"
+          (click)="window.location.reload()">Explorer</a>
         </div>
       </div>
 
       <div class="console-right">
         <div class="console-link">
-            <a routerLink="#">Explorer</a>
+            <a routerLink="/visite" [queryParams]="{plateform: plateforme[4]}"
+            (click)="window.location.reload()">Explorer</a>
           </div>
       </div>
     </div>
