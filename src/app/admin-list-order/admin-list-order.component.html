@@ -3,6 +3,7 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Date commande</th>
+      <th scope="col">Client</th>
       <th scope="col">Prix total</th>
       <th scope="col">Consulter</th>
 
@@ -14,6 +15,8 @@
       <td>{{obj.id}}</td>
 
       <td>{{dates[i]}}</td>
+
+      <td>{{obj.user.username}}</td>
 
       <td>{{obj.totalPrice}}€</td>
 
