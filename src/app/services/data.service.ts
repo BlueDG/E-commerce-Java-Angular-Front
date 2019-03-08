@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order, OrderPaging } from 'src/models';
+import { User, UserLight, PostGame, GamePaging, Game, GameCart, Order, OrderPaging, PostOrder } from 'src/models';
 import { Observable, of } from 'rxjs';
 
 const URL_BACKEND = environment.backendUrl;
@@ -104,6 +104,14 @@ export class DataService {
       withCredentials: true
     };
     return this._http.post<OrderPaging>(`${environment.backendUrl}/order/myorders`, id, httpOptionsSearch);
+  }
+
+  findOrdersAdmin(page: string, postOrder: PostOrder): Observable<OrderPaging> {
+    let httpOptionsSearch = {
+      headers: httpOptions.headers.append('page', page),
+      withCredentials: true
+    };
+    return this._http.post<OrderPaging>(`${environment.backendUrl}/order/all`, postOrder, httpOptionsSearch);
   }
 
   findOrderById(): Observable<Order> {
