@@ -23,11 +23,8 @@
         <div class="col-12 line2">
             <p>STOCK : {{gameToShow.stock}} PRIX : {{gameToShow.price}}€</p>
             <label>Quantité</label>
-            <input type="number" class="form-control" id="game" name="game" min="1" max="{{gameToShow.stock}}"
-                [(ngModel)]="gameToAdd.quantity">
-
-            <button type="button" class="btn btn-outline-dark" (click)=addCart() [disabled]="stock == 0">Ajouter au
-                panier</button>
+            <input type="number" class="form-control col-4" id="game" name="game" min="1" max="{{gameToShow.stock}}" [(ngModel)]="gameToAdd.quantity">
+            <button type="button" class="btn btn-outline-dark" (click)=addCart() [disabled]="stock == 0">Ajouter au panier</button>
         </div>
     </section>
 

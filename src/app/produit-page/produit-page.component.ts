@@ -7,18 +7,23 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './produit-page.component.html',
   styleUrls: ['./produit-page.component.css']
 })
+
+
 export class ProduitPageComponent implements OnInit {
 
   gameToShow: Game;
   purchaseList: GameCart[];
   dateToShow: Date;
   date: string;
+
   gameToAdd: GameCart = {
     game: this.gameToShow,
-    quantity: 0
+    quantity: 1
   };
+
   stock: number;
   credential : string;
+  
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -41,3 +46,5 @@ export class ProduitPageComponent implements OnInit {
   }
 
 }
+
+

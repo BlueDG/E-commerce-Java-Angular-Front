@@ -81,7 +81,7 @@ h3, .h3, .ccaption{
 .ensemble-rangee-1 {
     height: 25rem;
     display: flex;
-    background-color: white;
+    background-color: #96E9FF;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 2%;
@@ -234,6 +234,12 @@ h3, .h3, .ccaption{
     height: auto;
 }
 
+
+.title-top-games a:active{
+  color: yellow;
+}
+
+
 /*  css de la section console */
 
 
@@ -252,7 +258,7 @@ h3, .h3, .ccaption{
  
 
  .console-left {
-    background-image: url("../../assets/img/last-img-genesis-bis.jpg");
+    background-image: url("../../assets/img/last-img-genesis-bis3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
