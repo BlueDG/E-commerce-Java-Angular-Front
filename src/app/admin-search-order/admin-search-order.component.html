@@ -1,0 +1,36 @@
+<div *ngIf="orderPaging.orders.length == 0">
+
+  <form (ngSubmit)="submit()" #monForm="ngForm">
+    <table>
+      <tr>
+        <td><label>Prenom</label></td>
+        <td><input class="form-control" [(ngModel)]="postOrder.firstname" name="val1"></td>
+      </tr>
+      <tr>
+        <td><label>Nom</label></td>
+        <td><input class="form-control" [(ngModel)]="postOrder.lastname" name="val2"></td>
+      </tr>
+      <tr>
+        <td><label>Order N°</label></td>
+        <td><input class="form-control" [(ngModel)]="postOrder.orderNum" name="val3"></td>
+      </tr>
+      <tr>
+        <td><label>startDate</label></td>
+        <td><input class="form-control" [(ngModel)]="postOrder.startDate" name="val4"></td>
+      </tr>
+      <tr>
+        <td><label>endDate</label></td>
+        <td><input class="form-control" [(ngModel)]="postOrder.endDate" name="val5"></td>
+      </tr>
+    </table>
+    <button class="btn btn-outline-dark" type="submit">Envoyer</button>
+    <ngb-alert *ngIf="failMessage" type="danger" (close)="failMessage = null">{{ failMessage }}</ngb-alert>
+  </form>
+</div>
+
+
+<div *ngIf="orderPaging.orders.length > 0">
+  <app-admin-list-order [orderPaging]="orderPaging" [orderSearch]="postOrder"></app-admin-list-order>
+  <!--[games]="games" [totalResult]="totalResult" [gameSearch]="postOrder"-->
+</div>
+<!--<div *ngIf="games?.length == 0; then changeFailMessage('aucun resultat')"></div>-->

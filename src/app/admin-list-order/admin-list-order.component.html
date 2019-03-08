@@ -1,0 +1,29 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Date commande</th>
+      <th scope="col">Prix total</th>
+      <th scope="col">Consulter</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor='let obj of orderPaging.orders; index as i'>
+      <td>{{obj.id}}</td>
+
+      <td>{{dates[i]}}</td>
+
+      <td>{{obj.totalPrice}}€</td>
+
+      <td><button class="btn btn-secondary" routerLink="/affiche-order"
+          [queryParams]="{toEdit: obj | json}">Consulter</button></td>
+
+
+    </tr>
+
+  </tbody>
+</table>
+<ngb-pagination class="d-flex justify-content-center" [collectionSize]='totalResult' [(page)]="page"
+  aria-label="Default pagination" (pageChange)="printNewPage()"></ngb-pagination>

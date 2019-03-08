@@ -17,6 +17,8 @@ import { ProfilComponent } from './profil/profil.component';
 import { ProfilModifierComponent } from './profil-modifier/profil-modifier.component';
 import { ListOrderComponent } from './list-order/list-order.component';
 import { AfficheCommandeComponent } from './affiche-commande/affiche-commande.component';
+import { AdminListOrderComponent } from './admin-list-order/admin-list-order.component';
+import { AdminSearchOrderComponent } from './admin-search-order/admin-search-order.component';
 
 
 const routes: Routes = [
@@ -33,7 +35,8 @@ const routes: Routes = [
   { path: 'profil', component: ProfilComponent },
   { path: 'profil-modif', component: ProfilModifierComponent },
   { path: 'order-list', component: ListOrderComponent },
-  { path: 'affiche-order', component: AfficheCommandeComponent},
+  { path: 'admin-search-order', component: AdminSearchOrderComponent },
+  { path: 'affiche-order', component: AfficheCommandeComponent },
   { path: '**', redirectTo: '' }
 
 ];
