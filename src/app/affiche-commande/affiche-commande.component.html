@@ -1,1 +1,32 @@
-{{order.id}}
+<table class="table table-hover" width=100%>
+    <tr>
+        <th>ID de commande</th>
+        <th>Contenu commande</th>
+        <th>Date de commande</th>
+        <th>Prix total</th>
+    </tr>
+    <tr>
+        <td>{{order.id}}</td>
+        <td>
+            <div *ngFor="let game of gameCart">
+                <table class="table table-hover" width=50%>
+                    <tr align="center">
+                        <th>Jeu</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire</th>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <p><img src={{game.game.image}} width=100></p>
+                            <p>{{game.game.name}}</p>
+                        </td>
+                        <td>{{game.quantity}}</td>
+                        <td>{{game.game.price}}€</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>{{order.orderDate}}</td>
+        <td>{{order.totalPrice}}€</td>
+    </tr>
+</table>
