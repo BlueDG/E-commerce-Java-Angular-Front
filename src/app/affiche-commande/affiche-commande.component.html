@@ -1,11 +1,11 @@
 <table class="table table-hover" width=100%>
-    <tr>
+    <tr align="center">
         <th>ID de commande</th>
         <th>Contenu commande</th>
         <th>Date de commande</th>
         <th>Prix total</th>
     </tr>
-    <tr>
+    <tr align="center">
         <td>{{order.id}}</td>
         <td>
             <div *ngFor="let game of gameCart">
@@ -17,8 +17,8 @@
                     </tr>
                     <tr align="center">
                         <td>
-                            <p><img src={{game.game.image}} width=100></p>
-                            <p>{{game.game.name}}</p>
+                            <img src={{game.game.image}} width=100 height="150">
+                            
                         </td>
                         <td>{{game.quantity}}</td>
                         <td>{{game.game.price}}€</td>
@@ -26,7 +26,7 @@
                 </table>
             </div>
         </td>
-        <td>{{order.orderDate}}</td>
+        <td>{{date}}</td>
         <td>{{order.totalPrice}}€</td>
     </tr>
 </table>
