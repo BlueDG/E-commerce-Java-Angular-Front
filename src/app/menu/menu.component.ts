@@ -40,6 +40,10 @@ export class MenuComponent implements OnInit {
     );
     //window.location.reload();
   }
+
+  reload() {
+    window.location.reload();
+  }
 }
 
 //sessionstorage.getItem(credential);
