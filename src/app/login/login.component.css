@@ -9,6 +9,8 @@ ngb-alert {
 
 /* css du bouton connexion */
 
+/* ces classes ont été faites afin d'impacter seulement le bouton connexion sans toucher login et close */
+/* sans succès. créer un id n'a pas marché non plus. */
 
 .btn-connexion {
     color: grey !important;
