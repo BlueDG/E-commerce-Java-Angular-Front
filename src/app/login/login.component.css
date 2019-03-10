@@ -5,3 +5,33 @@ input {
 ngb-alert {
     margin-top: 1ch;
 }
+
+
+/* css du bouton connexion */
+
+
+.btn-connexion {
+    color: grey !important;
+    border: none !important;
+    background-color: white !important;
+}
+  
+.btn-connexion:hover {
+    color: black !important;
+    border: none !important;
+    background-color: white !important;
+}
+
+/* du à bootstrap, je suis obligé d'impacter les autres boutons close et login */
+
+.btn-outline-dark {
+    color: grey;
+    border: none;
+    background-color: white;
+}
+
+.btn-outline-dark:hover {
+    color: black !important;
+    border: none !important;
+    background-color: white !important;
+}

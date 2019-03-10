@@ -107,6 +107,54 @@ a {
 	color: white;
  }
 
+/* css de l'icone user */
+
+.user-icon a{
+  text-decoration: none;
+}
+
+.btn-outline-primary {
+  color: black;
+  border-color: black;
+
+}
+
+.btn-outline-primary:hover {
+  color: black !important;
+  border-color: black !important;
+  background-color: #96E9FF !important;
+}
+
+.btn-outline-primary.dropdown-toggle {
+  color: black;
+  background-color: #96E9FF;
+  border-color: black;
+}
+
+/* css du dropdown menu */
+
+.btn-outline-dark {
+  color: grey;
+  border: none;
+  background-color: white;
+}
+
+.btn-outline-dark:hover {
+  color: black !important;
+  border: none !important;
+  background-color: white !important;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+  background-color: #96E9FF;
+
+}
+
+.dropdown-menu.show {
+  background-color: white;
+  border-color: red;
+}
 
 /* ******************************************** */
 

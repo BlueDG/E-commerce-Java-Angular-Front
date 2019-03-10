@@ -42,33 +42,31 @@
             <form class="form-inline" (ngSubmit)="submit()">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="name" name="n1">
             </form>
-            <div *ngIf="credential=='ADMIN' || credential == 'REGISTER'; else notLogged">
+
+            <div *ngIf="credential=='ADMIN' || credential == 'REGISTER'; else notLogged" class="user-icon">
                 <!--LOGGED-->
                 <div ngbDropdown>
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i
-                            class="fas fa-user"></i></button>
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-user"></i></button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/profil"
-                            style="width : 160px;">Profil</button>
-                        <button ngbDropdownItem class="btn btn-outline-dark" (click)="deco()"
-                            style="width : 160px;">Deconnexion</button>
+                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/profil" style="width : 160px;">Profil</button>
+                        <button ngbDropdownItem class="btn btn-outline-dark" (click)="deco()" style="width : 160px;">Deconnexion</button>
                     </div>
                 </div>
             </div>
             <ng-template #notLogged>
                 <div ngbDropdown>
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i
-                            class="fas fa-user"></i></button>
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-user"></i></button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                         <app-login></app-login>
-                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/create-account"
-                            style="width : 160px;">Inscription</button>
+                        <button ngbDropdownItem class="btn btn-outline-dark" routerLink="/create-account" style="width : 160px;">Inscription</button>
                     </div>
                 </div>
             </ng-template>
+
             <div>
                 <app-cart></app-cart>
             </div>
+
         </nav>
     </div>
 
