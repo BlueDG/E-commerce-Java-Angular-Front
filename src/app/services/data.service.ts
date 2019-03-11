@@ -84,6 +84,14 @@ export class DataService {
     return this._http.post<GamePaging>(`${environment.backendUrl}/visitor`, game, httpOptionsSearch);
   }
 
+  searchOneGame(name: string): Observable<Game> {
+    let httpOptionsSearch = {
+      headers: httpOptions.headers.append('name', name),
+      withCredentials: true
+    };
+    return this._http.get<Game>(`${environment.backendUrl}/game`, httpOptionsSearch);
+  }
+
   searchUserByUsername(username: string): Observable<User> {
     return this._http.post<User>(`${environment.backendUrl}/user`, username, httpOptions);
   }

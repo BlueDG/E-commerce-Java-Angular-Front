@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { AdminRechercheComponent } from './admin-recherche/admin-recherche.component';
-import { AppComponent } from './app.component';
 
 import { AdminCreerComponent } from './admin-creer/admin-creer.component';
 
@@ -17,7 +15,6 @@ import { ProfilComponent } from './profil/profil.component';
 import { ProfilModifierComponent } from './profil-modifier/profil-modifier.component';
 import { ListOrderComponent } from './list-order/list-order.component';
 import { AfficheCommandeComponent } from './affiche-commande/affiche-commande.component';
-import { AdminListOrderComponent } from './admin-list-order/admin-list-order.component';
 import { AdminSearchOrderComponent } from './admin-search-order/admin-search-order.component';
 import { AdminAfficheOrderComponent } from './admin-affiche-order/admin-affiche-order.component';
 
@@ -38,7 +35,7 @@ const routes: Routes = [
   { path: 'order-list', component: ListOrderComponent },
   { path: 'admin-search-order', component: AdminSearchOrderComponent },
   { path: 'affiche-order', component: AfficheCommandeComponent },
-  { path: 'admin-affiche-order', component: AdminAfficheOrderComponent},
+  { path: 'admin-affiche-order', component: AdminAfficheOrderComponent },
   { path: '**', redirectTo: '' }
 
 ];
