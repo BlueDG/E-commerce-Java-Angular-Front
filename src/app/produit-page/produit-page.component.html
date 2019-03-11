@@ -19,14 +19,12 @@
         </div>
     </section>
 
-    <section class="row section-product-line2">
-        <div class="col-12 line2">
-            <p>STOCK : {{gameToShow.stock}} PRIX : {{gameToShow.price}}€</p>
-            <label>Quantité</label>
-            <input type="number" class="form-control" id="game" name="game" min="1" max="{{gameToShow.stock}}"
-                [(ngModel)]="gameToAdd.quantity" style="width: 10em;">
-
-            <button type="button" class="btn btn-outline-dark" (click)=addCart() [disabled]="stock == 0">Ajouter au panier</button>
+    <section class="row top-line2">
+        <div class="line2">
+            <p class="space">STOCK : {{gameToShow.stock}} PRIX : {{gameToShow.price}}€</p>
+            <label class="space">Quantité</label>
+            <input type="number" class="form-control space" id="game" name="game" min="1" max="{{gameToShow.stock}}" [(ngModel)]="gameToAdd.quantity" style="width: 10em;">
+            <button type="button" class="btn btn-outline-dark space" (click)=addCart() [disabled]="stock == 0">Ajouter au panier</button>
             <div *ngIf="stock==0">
                 Ce jeu n'est pas disponible pour le moment.
             </div>
@@ -34,7 +32,7 @@
     </section>
 
     <section class="row section-product-line3">
-        <div class="col-12 details">
+        <div class="details">
             <p>{{gameToShow.description}}</p>
         </div>
     </section>
