@@ -3,7 +3,7 @@
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Cart</h4>
+    <h4 class="modal-title" id="modal-basic-title">Panier</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -12,11 +12,11 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Platform</th>
-          <th scope="col">Price</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Delete</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Plateforme</th>
+          <th scope="col">Prix</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Supprimer</th>
         </tr>
       </thead>
       <tbody>
@@ -30,14 +30,14 @@
 
           <td>{{obj.quantity}}</td>
 
-          <td><button class="btn btn-danger" (click)="removeFromCart(obj)">Delete</button></td>
+          <td><button class="btn btn-danger" (click)="removeFromCart(obj)">Supprimer</button></td>
         </tr>
 
       </tbody>
     </table>
     <hr />
     <div>Prix Total : {{total}} €</div>
-    <button class="btn btn-primary" (click)="checkout()">Checkout</button>
+    <button class="btn btn-primary" (click)="checkout()">Valider commande</button>
     <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}
     </ngb-alert>
     <ngb-alert *ngIf="failMessage" type="danger" (close)="failMessage = null">{{ failMessage }}
@@ -45,6 +45,6 @@
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">close</button>
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Fermer</button>
   </div>
 </ng-template>
