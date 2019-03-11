@@ -79,13 +79,12 @@ h3, .h3, .ccaption{
 }
 
 .ensemble-rangee-1 {
-    height: 25rem;
-    display: flex;
+    height: 27rem;
     background-color: #96E9FF;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 2%;
-    justify-content: center;
+    padding-top: 0.2rem;
 }
 
 .products-intro {
